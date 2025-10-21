@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from base.base_page import BasePage
-
+#checking new push
 class BranchSettingsPage(BasePage):
     ADD_BRANCH_BTN = (By.XPATH, "//button[normalize-space()='Add Branch']")
     MODAL = (By.CSS_SELECTOR, "div.modal-content")
