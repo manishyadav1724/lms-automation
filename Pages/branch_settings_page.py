@@ -34,3 +34,4 @@ class BranchSettingsPage(BasePage):
         self.type(self.ZIP, zip_code)
         self.js_click(self.SAVE)
         return self
+

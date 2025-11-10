@@ -1,6 +1,6 @@
 import os
 
-BASE_URL = os.getenv("BASE_URL", "https://staging-lms.gitview.net")
+BASE_URL = os.getenv("BASE_URL", "https://staging-lms.gitview.net/")
 LOGIN_EMAIL = os.getenv("LOGIN_EMAIL", "manishnewdasboard_014@gmail.com")
 LOGIN_PASSWORD = os.getenv("LOGIN_PASSWORD", "Test1@1234")
 REG_EMAIL = os.getenv("REG_EMAIL", "manishnewdasboard9@gmail.com")

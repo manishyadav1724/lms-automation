@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="48.968" timestamp="2025-10-17T21:04:27.570930" hostname="Manish_Yadav"><testcase classname="tests.test_07_course_purchase_dashboard" name="test_course_purchase_from_dashboard" time="44.708" /></testsuite></testsuites>

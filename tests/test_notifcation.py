@@ -6,7 +6,7 @@ def test_open_notifications(driver):
     LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
 
     # Go to /corporate_v2
-    driver.get(driver.current_url.replace("/corporate", "/corporate_v2"))
+    #driver.get(driver.current_url.replace("/corporate", "/corporate_v2"))
 
     # Click Notifications
     Header(driver).open_notifications()

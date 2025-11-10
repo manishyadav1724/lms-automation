@@ -17,3 +17,5 @@ def test_add_branch(driver):
         zip_code="23434",
     )
     assert True
+
+
