@@ -1,0 +1,57 @@
+Test Run Report
+================
+Start Time : 2025-11-14 16:02:16
+End Time   : 2025-11-14 16:24:14
+Total Time : 1317.803 seconds
+
+Summary
+-------
+Total tests run : 18
+Passed          : 17
+Failed          : 1
+Skipped         : 0
+Unknown         : 0
+
+Details (test, outcome, duration seconds)
+-----------------------------------------------------
+tests/Test_logout.py::test_logout_functionality  |  passed  |  27.111
+tests/test_active_learners.py::test_active_learners_tile  |  passed  |  18.004
+tests/test_add_branch.py::test_add_branch  |  passed  |  35.642
+tests/test_admin_download_invoice.py::test_admin_download_invoice  |  passed  |  15.733
+tests/test_bulk_buy.py::test_bulk_buy  |  failed  |  17.270
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="9b12067e-8210-45d7-966a-b1640318d6ea")>
+
+    def test_bulk_buy(driver):
+        LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+    
+        # Navigate to dashboard (keep V1, do NOT switch to V2)
+        dash = DashboardPage(driver)
+        # dash = DashboardPage(driver).go_to_v2_from_current()  #  Commented out to stay on V1
+    
+        checkout = (dash.open_purchase_seats()
+                        .search_course("Clinical Care for the Heart Failure Patient")
+                        .add_first_result_to_cart()
+>                       .proceed_to_checkout())
+
+tests\test_bulk_buy.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\dashboard_page.py:53: in proceed_to_checkout
+    self.click(sel
+... (truncated)
+
+tests/test_bulk_invites.py::test_bulk_invites_adding_rows  |  passed  |  26.244
+tests/test_category_selection.py::test_verify_category_selection_in_profile  |  passed  |  39.039
+tests/test_course_buy_catalog.py::test_course_buy_from_catalog  |  passed  |  65.218
+tests/test_course_purchase_dashboard.py::test_course_purchase_from_dashboard  |  passed  |  41.824
+tests/test_language_selection_spanish.py::test_language_selection_spanish  |  passed  |  20.519
+tests/test_login.py::test_login_and_go_v2  |  passed  |  16.733
+tests/test_notifcation.py::test_open_notifications  |  passed  |  19.703
+tests/test_pending_invites.py::test_pending_invites_tile  |  passed  |  29.833
+tests/test_registration.py::test_registration_flow  |  passed  |  88.012
+tests/test_user_can_login.py::test_user_can_login  |  passed  |  36.912
+tests/test_verify_add_remove_course_cart.py::test_verify_add_remove_course_cart  |  passed  |  85.382
+tests/test_verify_download_certificate.py::test_verify_download_certificate  |  passed  |  27.595
+tests/test_verify_switch_to_student_dashboard.py::test_verify_switch_to_student_dashboard  |  passed  |  39.438
+
+End of report

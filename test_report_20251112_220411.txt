@@ -1,0 +1,131 @@
+Test Run Report
+================
+Start Time : 2025-11-12 22:04:12
+End Time   : 2025-11-12 22:30:11
+Total Time : 1558.482 seconds
+
+Summary
+-------
+Total tests run : 17
+Passed          : 13
+Failed          : 4
+Skipped         : 0
+Unknown         : 0
+
+Details (test, outcome, duration seconds)
+-----------------------------------------------------
+tests/Test_logout.py::test_logout_functionality  |  passed  |  42.645
+tests/test_active_learners.py::test_active_learners_tile  |  passed  |  44.448
+tests/test_add_branch.py::test_add_branch  |  failed  |  150.119
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="43c098e0-c354-4002-b718-e7acda53f749")>
+
+    def test_add_branch(driver):
+        LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+        page = DashboardPage(driver).go_to_v2_from_current().open_branch_settings()
+>       page.add_branch(
+            first="John",
+            last="Doe",
+            name="Main Training Branch",
+            email="branch.main@example.com",
+            location="Texas HQ, US",
+            country_text="United States",
+            state_value="32",
+            city="Shaktinagar",
+            zip_code="23434",
+        )
+
+tests\test_add_branch.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\branch_settings_page.py:22: in add_branch
+    self.wait_visible(self.MODAL)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibil
+... (truncated)
+
+tests/test_admin_download_invoice.py::test_admin_download_invoice  |  passed  |  19.994
+tests/test_bulk_buy.py::test_bulk_buy  |  failed  |  34.553
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="1d02c03a-54b0-4ce6-819f-3dc195469674")>
+
+    def test_bulk_buy(driver):
+        LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+        dash = DashboardPage(driver).go_to_v2_from_current()
+    
+        checkout = (dash.open_purchase_seats()
+                        .search_course("Clinical Care for the Heart Failure Patient")
+                        .add_first_result_to_cart()
+>                       .proceed_to_checkout())
+
+tests\test_bulk_buy.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\dashboard_page.py:53: in proceed_to_checkout
+    self.click(self.PROCEED_CHECKOUT_BTN)
+base\base_page.py:179: in click
+    el.click()
+.venv\Lib\site-packages\selenium\webdriver\remote\webelement.py:94: in click
+    self._execute(Command.CLICK_ELEMENT)
+.venv\Lib\site-packages\seleni
+... (truncated)
+
+tests/test_bulk_invites.py::test_bulk_invites_adding_rows  |  passed  |  53.768
+tests/test_category_selection.py::test_verify_category_selection_in_profile  |  passed  |  54.237
+tests/test_course_buy_catalog.py::test_course_buy_from_catalog  |  failed  |  50.030
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="eaefce32-813e-49b4-961d-902ef29a00e1")>
+
+    def test_course_buy_from_catalog(driver):
+        email = unique_email()
+        password = "Test1@1234"
+    
+        # 1) Register a brand-new corporate account
+        reg = RegistrationPage(driver)
+        (reg.start_from_home(config.BASE_URL)
+           .go_to_group_discount()
+>          .start_registration(company="AHCA", email=email)
+           .fill_basic_info_and_continue(
+                first="Manish", last="Yadav",
+                mobile="9876543210", password=password
+            )
+           # keep the order that worked for you:
+           .pick_category_and_save(category_value="523", subcategory_value="1850")
+           .accept_terms_and_submit())
+
+tests\test_course_buy_catalog.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\registration_page.py:246:
+... (truncated)
+
+tests/test_course_purchase_dashboard.py::test_course_purchase_from_dashboard  |  failed  |  51.833
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="cc3f97e5-4990-4dd3-addd-3e151e5219ad")>
+
+    def test_course_purchase_from_dashboard(driver):
+        LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+        dash = DashboardPage(driver).go_to_v2_from_current()
+    
+        # Purchase seats -> search -> add to cart -> checkout
+        checkout = (dash.open_purchase_seats()
+                        .search_course("Clinical Care for the Heart Failure Patient")
+                        .add_first_result_to_cart()
+>                       .proceed_to_checkout())
+
+tests\test_course_purchase_dashboard.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\dashboard_page.py:53: in proceed_to_checkout
+    self.click(self.PROCEED_CHECKOUT_BTN)
+base\base_page.py:179: in click
+    el.click()
+.venv\Lib\site-packages\selenium\webdriver\remo
+... (truncated)
+
+tests/test_language_selection_spanish.py::test_language_selection_spanish  |  passed  |  82.772
+tests/test_login.py::test_login_and_go_v2  |  passed  |  37.329
+tests/test_notifcation.py::test_open_notifications  |  passed  |  47.929
+tests/test_pending_invites.py::test_pending_invites_tile  |  passed  |  23.673
+tests/test_registration.py::test_registration_flow  |  passed  |  74.857
+tests/test_user_can_login.py::test_user_can_login  |  passed  |  94.296
+tests/test_verify_add_remove_course_cart.py::test_verify_add_remove_course_cart  |  passed  |  49.229
+tests/test_verify_switch_to_student_dashboard.py::test_verify_switch_to_student_dashboard  |  passed  |  33.985
+
+End of report

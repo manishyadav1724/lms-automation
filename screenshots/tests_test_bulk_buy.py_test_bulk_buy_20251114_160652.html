@@ -1,0 +1,2741 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course Catalogue | LearnTastic</title>
+    <meta name="csrf-token" content="WcQluGCQjtZr4pCjRe6jGcJCLypvdeEgLDPUuJuZ">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="/assets/organization_panel_v2/images/logo/fav.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="/assets/organization_panel_v2/css/dataTables.bootstrap5.css?version=1763116606" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link href="/assets/organization_panel_v2/css/font-awesome.css?version=1763116606" rel="stylesheet">
+    <link href="/assets/organization_panel_v2/css/owl.carousel.min.css?version=1763116606" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.bootstrap5.min.css">
+    <link href="/assets/organization_panel_v2/css/styles3.css?version=1763116606" rel="stylesheet">
+        <style>
+        /* Suggestion dropdown */
+        .suggestion-box {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 120%;
+            background: #fff;
+            border: 1px solid #ddd;
+            z-index: 1000;
+            display: none;
+            max-height: 320px;
+            overflow: auto
+        }
+
+        .suggestion-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .suggestion-box li {
+            padding: 8px 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .suggestion-box li:hover,
+        .suggestion-box li.is-active {
+            background: #f5f5f5
+        }
+
+        .sug-title {
+            font-size: 13px;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .sug-badge {
+            font-size: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1px 6px
+        }
+
+        .sug-meta {
+            font-size: 12px;
+            opacity: .8
+        }
+
+        .clear-search {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .clear-search:hover {
+            color: #333;
+        }
+    </style>
+    <style class="gtranslate_css">div.skiptranslate,#google_translate_element2{display:none!important}body{top:0!important}font font{background-color:transparent!important;box-shadow:none!important;position:initial!important}</style></head>
+
+<body style="overflow: hidden; padding-right: 0px;">
+    <div class="v2-ribbon show" style="display: block;">
+        <div class="v2-ribbon-content">
+            <div class="v2-ribbon-text">
+                <span class="v2-ribbon-question">Enjoying the original version?</span>
+                <a href="https://staging-lms.gitview.net/corporate_v2/switch-to-v1" class="v2-ribbon-link">Click here</a>
+                <span class="v2-ribbon-end">to go back.</span>
+            </div>
+            <button class="v2-ribbon-close" onclick="hideV2Ribbon()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+
+        <div class="main-container">
+            <div class="mobile_header">
+                <a href="/paner/corporate_v2" class="logo-icon"><img src="/storage/545162/lt-logo/LT_logo_Black_Color_2.png" alt="logo"></a>
+                <a href="tel:1-800-263-7257" class="phone_icon"><img src="/assets/organization_panel_v2/images/phone_icon.png" alt="logo">1-800-263-7257</a>
+                <a href="javascript:void(0)" class="cart_icon" aria-label="Cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="/assets/organization_panel_v2/images/cart_icon.png" alt=""><span class="cart-count">3</span></a>
+                <a href="javascript:void(0)" aria-label="menu" data-bs-toggle="offcanvas" data-bs-target="#menuoffcanvasRight" aria-controls="menuoffcanvasRight" class="user-name">
+                    <img src="/getDefaultAvatar?item=787712&amp;name=John Doe&amp;size=40" alt="John Doe">
+                </a>
+            </div>
+            <a href="javascript:void(0)" class="menutoggle-icon"></a>
+            <nav id="sidebar" class="sidebar-wrapper sidebar-main">
+                <!-- Top Section -->
+                <div class="sidebar-row w-100">
+                    <div class="d-flex justify-content-center main-logo">
+                        <img src="/storage/545162/lt-logo/LT_logo_Black_Color_2.png" alt="logo" width="160" class=" logo-text">
+                    </div>
+                    <ul class="nav flex-columnd menu-div">
+                        <li class="nav-item">
+                            <a href="/corporate_v2" class="nav-link ">
+                                <span class="spirit_icon dash_icon"></span> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/corporate_v2/course-catalogue" class="nav-link active">
+                                <span class="spirit_icon course_icon"></span> Course Catalog
+                            </a>
+                        </li><li class="nav-item">
+                            <a href="https://staging-lms.gitview.net/corporate_v2/learners" class="nav-link ">
+                                <span class="spirit_icon learners_icon"></span> Learners
+                            </a>
+                        </li>
+                                                    <li class="nav-item">
+                                <a href="https://staging-lms.gitview.net/corporate_v2/seat_code" class="nav-link ">
+                                    <span class="spirit_icon seats_icon"></span> Seats
+                                </a>
+                            </li>
+                                                <li class="nav-item">
+                            <a href="https://staging-lms.gitview.net/corporate_v2/setting/certification" class="nav-link "><span class="spirit_icon tc_icon"></span>Reporting</a>
+                        </li>
+                                                    <li class="nav-item">
+                                <a href="https://staging-lms.gitview.net/corporate_v2/invoice" class="nav-link ">
+                                    <span class="spirit_icon billings_icon"></span> Invoices
+                                </a>
+                            </li>
+                                                                            <li class="nav-item">
+                                <a href="https://staging-lms.gitview.net/corporate_v2/setting/branch" class="nav-link "><span class="spirit_icon bs_icon"></span> Branch Settings</a>
+                            </li>
+                                                                            <li class="nav-item">
+                                <a href="https://staging-lms.gitview.net/corporate_v2/setting/manage_admin" class="nav-link "><span class="spirit_icon ma_icon"></span> Manage Admins</a>
+                            </li>
+                                            </ul>
+                </div>
+
+                
+                <div class="sidebar-footer mt-auto">
+                    <a href="/corporate_v2/switch_to_student?student_id=787713" id="switchToStudentBtn" class="sidebar-btn active mb-2" style="">
+                        <i class="bi bi-arrow-repeat"></i> Switch to Student
+                    </a>
+                </div>
+            </nav>
+            <div class="app-container">
+                <div class="app-body">
+                    <div class="app-hero-header d-flex align-items-center">
+                        <div class="ms-auto d-lg-flex flex-row">
+                            <ul class="list-unstyled d-flex align-items-center gap-3 m-0 ms-auto">
+                                                                    
+                                    <li class="dropdown">
+                                        <a class="btn border header-dropdown rounded-pill d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="/assets/organization_panel_v2/images/globe.svg" alt="Globe" width="16" height="16" class="me-1">
+                                            <div class="text-start lh-sm text-truncate">
+                                                <small class="text-muted d-block" style="font-size:8px;">
+                                                    Head Branch:
+                                                </small>
+                                                <span class="fw-semibold small d-inline-block text-truncate align-middle" style="max-width:100px;" title="AHCA">
+                                                    AHCA
+                                                </span>
+                                            </div>
+                                            <img src="/assets/organization_panel_v2/images/arrow.svg" alt="Arrow" width="16" height="16" class="ms-1">
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=787712">Head Branch: AHCA</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=788383">Main Training Branch</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=788384">Main Training Branch</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=788385">QA_AutoBranch_04cf56</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789157">QA_AutoBranch_5359f0</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789679">QA_AutoBranch_5bb376</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789686">QA_AutoBranch_59c2e0</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789831">Main Training Branch</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789832">QA_AutoBranch_0d6e3d</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789833">Main Training Branch 1762980361</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789875">Main Training Branch 1763059571</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789878">Main Training Branch 1763062017</a></li>
+                                                                                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789939">Main Training Branch 1763116484</a></li>
+                                                                                                                                    </ul>
+                                    </li>
+                                                                
+                                <li class="dropdown">
+                                    <div class="">
+                                        <div class="gtranslate_wrapper gt_container--wz96ug"><!-- GTranslate: https://gtranslate.com --><select class="gt_selector notranslate" aria-label="Select Language"><option value="">Select Language</option><option value="en|en" data-gt-href="#" selected="">English</option><option value="en|es" data-gt-href="#">Spanish</option></select><div id="google_translate_element2"></div></div>
+                                    </div>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">English</a></li>
+                                        <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                    </ul>
+                                </li>
+
+                                
+                                                                    <li class="dropdown">
+                                        <div class="btn header-dropdown-name border rounded-pill d-flex align-items-center " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="/getDefaultAvatar?item=342948&amp;name=Jessa &amp;size=40" alt="Jessa " width="20" height="20" class="me-1">
+                                            <div class="text-start lh-sm">
+                                                <small class="text-muted d-block" style="font-size:8px;">Account Executive</small>
+                                                <span class="fw-semibold small text-truncate d-inline-block" style="max-width:52px; vertical-align:middle;" title="Jessa ">
+                                                    Jessa 
+                                                </span>
+                                                <a href="tel:1234567890" class="text-decoration-none fw-semibold text-black" style="font-size:9px;">
+                                                    <img src="/assets/organization_panel_v2/images/learner-icon/phone-icon.png" alt="" style="max-width:10px;"> 1234567890
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                
+                                <li>
+                                    <button class="cart-icon-btn " aria-label="Cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                        <img src="/assets/organization_panel_v2/images/cart_icon.svg" alt="Globe" width="16" height="16" class="">
+                                        <span class="cart-count">3</span>
+                                    </button>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="https://staging-lms.gitview.net/corporate_v2/setting/notification" class="btn btn-light rounded-circle alert-btn position-relative" aria-label="Notifications">
+                                        <img src="/assets/organization_panel_v2/images/notification_icon.svg" alt="Notifications" width="16" height="16">
+                                                                            </a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <div class="rounded-circle text-dark d-flex justify-content-center align-items-center fw-semibold name_btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="https://staging-lms.gitview.net/corporate_v2/setting/profile">
+                                            <img src="/getDefaultAvatar?item=787712&amp;name=John Doe&amp;size=40" alt="John Doe">
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <button class="classic-switch-btn" onclick="window.location.href='https://staging-lms.gitview.net/corporate_v2/switch-to-v1'">
+                                                Switch to Classic Version
+                                            </button>
+                                        </li>
+                                        <li><a class="dropdown-item" href="https://staging-lms.gitview.net/corporate_v2/setting/profile"><i class="bi bi-person-fill"></i> Edit Profile</a></li>
+                                        <li><a class="dropdown-item" href="/logout"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="custom-container">
+                            <div class="row mt-4 mt-0 mob-margin">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+            <p class="course-top-subheading mb-2">
+                Construction - HAZWOPER
+                <img role="button" data-bs-toggle="modal" data-bs-target="#categoryModal" src="/assets/organization_panel_v2/images/edit_icon_new.png" alt="Edit" class="">
+            </p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="mb-2 course-toggle d-flex align-items-center justify-content-end">
+                
+                <label class="bought-link" for="courseToggle">Seats Purchased</label>
+                <div class="form-check form-switch">
+                    <input type="hidden" name="is_purchased" id="isPurchasedHidden" value="0">
+                    <input class="form-check-input" type="checkbox" id="courseToggle">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="row">
+        
+        <div class="col-12 col-sm-6 col-md-8 col-lg-8 order_div">
+            
+            <div class="filter-bar d-flex flex-wrap gap-2 position-relative " id="filter-bar">
+                
+                <div class="filter-item-course dropdown position-relative">
+                    <button class="btn filter-btn course d-flex align-items-center justify-content-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/assets/organization_panel_v2/images/course_icon.svg" alt="Course Type Icon" class="me-2"> Course Type
+                    </button>
+                    <img src="/assets/organization_panel_v2/images/filter_down_arraow.svg" alt="Arrow Icon" class="dropdown-arrow">
+                    <ul class="dropdown-menu">
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?course_type=webinar&amp;page=1">
+                                    Course
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?course_type=bundle&amp;page=1">
+                                    Packages
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?course_type=subscribes&amp;page=1">
+                                    Subscribe
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+
+                
+                <div class="filter-item-state dropdown position-relative">
+                    <button class="btn filter-btn state d-flex align-items-center justify-content-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/assets/organization_panel_v2/images/world_blue.png" alt="State Icon" class="me-2"> State
+                    </button>
+                    <img src="/assets/organization_panel_v2/images/filter_down_arraow.svg" alt="Arrow Icon" class="dropdown-arrow">
+                    <ul class="dropdown-menu">
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10007&amp;page=1">
+                                    Alabama
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10008&amp;page=1">
+                                    Alaska
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10009&amp;page=1">
+                                    Arizona
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10010&amp;page=1">
+                                    Arkansas
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10011&amp;page=1">
+                                    California
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10012&amp;page=1">
+                                    Colorado
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10013&amp;page=1">
+                                    Connecticut
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10014&amp;page=1">
+                                    Delaware
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10015&amp;page=1">
+                                    Florida
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10016&amp;page=1">
+                                    Georgia
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10017&amp;page=1">
+                                    Hawaii
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10018&amp;page=1">
+                                    Idaho
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10019&amp;page=1">
+                                    Illinois
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10020&amp;page=1">
+                                    Indiana
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10021&amp;page=1">
+                                    Iowa
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10022&amp;page=1">
+                                    Kansas
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10023&amp;page=1">
+                                    Kentucky
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10024&amp;page=1">
+                                    Louisiana
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10025&amp;page=1">
+                                    Maine
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10026&amp;page=1">
+                                    Maryland
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10027&amp;page=1">
+                                    Massachusetts
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10028&amp;page=1">
+                                    Michigan
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10029&amp;page=1">
+                                    Minnesota
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10030&amp;page=1">
+                                    Mississippi
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10031&amp;page=1">
+                                    Missouri
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10032&amp;page=1">
+                                    Montana
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10033&amp;page=1">
+                                    Nebraska
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10034&amp;page=1">
+                                    Nevada
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10035&amp;page=1">
+                                    New Hampshire
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10036&amp;page=1">
+                                    New Jersey
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10037&amp;page=1">
+                                    New Mexico
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10038&amp;page=1">
+                                    New York
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10039&amp;page=1">
+                                    North Carolina
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10040&amp;page=1">
+                                    North Dakota
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10041&amp;page=1">
+                                    Ohio
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10042&amp;page=1">
+                                    Oklahoma
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10043&amp;page=1">
+                                    Oregon
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10044&amp;page=1">
+                                    Pennsylvania
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10045&amp;page=1">
+                                    Rhode Island
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10046&amp;page=1">
+                                    South Carolina
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10047&amp;page=1">
+                                    South Dakota
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10048&amp;page=1">
+                                    Tennessee
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10049&amp;page=1">
+                                    Texas
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10050&amp;page=1">
+                                    Utah
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10051&amp;page=1">
+                                    Vermont
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10052&amp;page=1">
+                                    Virginia
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10053&amp;page=1">
+                                    Washington
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10054&amp;page=1">
+                                    West Virginia
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10055&amp;page=1">
+                                    Wisconsin
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?filter_option_id=10056&amp;page=1">
+                                    Wyoming
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+
+                
+                <div class="filter-item-ceu dropdown position-relative" data-bs-auto-close="outside">
+                    <button class="btn filter-btn ceu d-flex align-items-center justify-content-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/assets/organization_panel_v2/images/ceus_icon.png" alt="CEU Icon" class="me-2"> CEU
+                    </button>
+                    <img src="/assets/organization_panel_v2/images/filter_down_arraow.svg" alt="Arrow Icon" class="dropdown-arrow">
+                    <ul class="dropdown-menu p-2">
+                        
+                                                                                <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?ce_hours_min=0&amp;ce_hours_max=1.99&amp;page=1">
+                                    Under 2 Hours
+                                </a>
+                            </li>
+                                                                                <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?ce_hours_min=2&amp;ce_hours_max=5&amp;page=1">
+                                    2 - 5 Hours
+                                </a>
+                            </li>
+                                                                                <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?ce_hours_min=5&amp;ce_hours_max=10&amp;page=1">
+                                    5 - 10 Hours
+                                </a>
+                            </li>
+                                                                                <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?ce_hours_min=10&amp;ce_hours_max=20&amp;page=1">
+                                    10 - 20 Hours
+                                </a>
+                            </li>
+                                                                                <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?ce_hours_min=20.01&amp;page=1">
+                                    20 Hours Over
+                                </a>
+                            </li>
+                        
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        
+                        <li class="px-2">
+                            <form method="GET" action="https://staging-lms.gitview.net/corporate_v2/course-catalogue" class="ceu-custom-range">
+                                
+                                                                <input type="hidden" name="page" value="1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <input name="ce_hours_min" maxlength="10" type="text" class="form-control" placeholder="Min" value="" style="width: 60px">
+                                    <input name="ce_hours_max" maxlength="10" type="text" class="form-control" placeholder="Max" value="" style="width: 60px">
+                                    <button type="submit" class="btn white_btn btn-sm m-0" style="height:35px;">Go</button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="filter-item-sort dropdown position-relative">
+                    <button class="btn filter-btn sort d-flex align-items-center justify-content-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/assets/organization_panel_v2/images/sort_icon.svg" alt="Sort Icon" class="me-2">
+                        <span class="text-truncate">Sort by</span>
+                    </button>
+                    <img src="/assets/organization_panel_v2/images/filter_down_arraow.svg" alt="Arrow Icon" class="dropdown-arrow">
+                    <ul class="dropdown-menu">
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?sort=default&amp;page=1">
+                                    Default
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?sort=popularity&amp;page=1">
+                                    Popularity
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?sort=price_asc&amp;page=1">
+                                    Price: Lowest Price
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?sort=price_desc&amp;page=1">
+                                    Price: Highest first
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?sort=ceu_asc&amp;page=1">
+                                    CE Hours: Lowest first
+                                </a>
+                            </li>
+                                                    <li>
+                                <a class="dropdown-item " href="https://staging-lms.gitview.net/corporate_v2/course-catalogue?sort=ceu_desc&amp;page=1">
+                                    CE Hours: Highest first
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+
+                
+                <div id="filterBadges" class="badges w-100 d-flex flex-wrap gap-2 d-none" data-course-type-map="{&quot;webinar&quot;:&quot;Course&quot;,&quot;bundle&quot;:&quot;Packages&quot;,&quot;subscribes&quot;:&quot;Subscribe&quot;}" data-sort-options="{&quot;default&quot;:&quot;Default&quot;,&quot;popularity&quot;:&quot;Popularity&quot;,&quot;price_asc&quot;:&quot;Price: Lowest Price&quot;,&quot;price_desc&quot;:&quot;Price: Highest first&quot;,&quot;ceu_asc&quot;:&quot;CE Hours: Lowest first&quot;,&quot;ceu_desc&quot;:&quot;CE Hours: Highest first&quot;}" data-state-map="{&quot;10007&quot;:&quot;Alabama&quot;,&quot;10008&quot;:&quot;Alaska&quot;,&quot;10009&quot;:&quot;Arizona&quot;,&quot;10010&quot;:&quot;Arkansas&quot;,&quot;10011&quot;:&quot;California&quot;,&quot;10012&quot;:&quot;Colorado&quot;,&quot;10013&quot;:&quot;Connecticut&quot;,&quot;10014&quot;:&quot;Delaware&quot;,&quot;10015&quot;:&quot;Florida&quot;,&quot;10016&quot;:&quot;Georgia&quot;,&quot;10017&quot;:&quot;Hawaii&quot;,&quot;10018&quot;:&quot;Idaho&quot;,&quot;10019&quot;:&quot;Illinois&quot;,&quot;10020&quot;:&quot;Indiana&quot;,&quot;10021&quot;:&quot;Iowa&quot;,&quot;10022&quot;:&quot;Kansas&quot;,&quot;10023&quot;:&quot;Kentucky&quot;,&quot;10024&quot;:&quot;Louisiana&quot;,&quot;10025&quot;:&quot;Maine&quot;,&quot;10026&quot;:&quot;Maryland&quot;,&quot;10027&quot;:&quot;Massachusetts&quot;,&quot;10028&quot;:&quot;Michigan&quot;,&quot;10029&quot;:&quot;Minnesota&quot;,&quot;10030&quot;:&quot;Mississippi&quot;,&quot;10031&quot;:&quot;Missouri&quot;,&quot;10032&quot;:&quot;Montana&quot;,&quot;10033&quot;:&quot;Nebraska&quot;,&quot;10034&quot;:&quot;Nevada&quot;,&quot;10035&quot;:&quot;New Hampshire&quot;,&quot;10036&quot;:&quot;New Jersey&quot;,&quot;10037&quot;:&quot;New Mexico&quot;,&quot;10038&quot;:&quot;New York&quot;,&quot;10039&quot;:&quot;North Carolina&quot;,&quot;10040&quot;:&quot;North Dakota&quot;,&quot;10041&quot;:&quot;Ohio&quot;,&quot;10042&quot;:&quot;Oklahoma&quot;,&quot;10043&quot;:&quot;Oregon&quot;,&quot;10044&quot;:&quot;Pennsylvania&quot;,&quot;10045&quot;:&quot;Rhode Island&quot;,&quot;10046&quot;:&quot;South Carolina&quot;,&quot;10047&quot;:&quot;South Dakota&quot;,&quot;10048&quot;:&quot;Tennessee&quot;,&quot;10049&quot;:&quot;Texas&quot;,&quot;10050&quot;:&quot;Utah&quot;,&quot;10051&quot;:&quot;Vermont&quot;,&quot;10052&quot;:&quot;Virginia&quot;,&quot;10053&quot;:&quot;Washington&quot;,&quot;10054&quot;:&quot;West Virginia&quot;,&quot;10055&quot;:&quot;Wisconsin&quot;,&quot;10056&quot;:&quot;Wyoming&quot;}" data-ceu-ranges="[{&quot;label&quot;:&quot;Under 2 Hours&quot;,&quot;min&quot;:0,&quot;max&quot;:1.99},{&quot;label&quot;:&quot;2 - 5 Hours&quot;,&quot;min&quot;:2,&quot;max&quot;:5},{&quot;label&quot;:&quot;5 - 10 Hours&quot;,&quot;min&quot;:5,&quot;max&quot;:10},{&quot;label&quot;:&quot;10 - 20 Hours&quot;,&quot;min&quot;:10,&quot;max&quot;:20},{&quot;label&quot;:&quot;20 Hours Over&quot;,&quot;min&quot;:20.01,&quot;max&quot;:null}]"></div>
+            </div>
+        </div>
+
+        
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 ">
+            <form action="https://staging-lms.gitview.net/corporate_v2/course-catalogue" method="GET" id="searchForm">
+                <div class="custom-search-wrapper d-flex align-items-center justify-content-end">
+                    <div class="mobile_sort" id="mobile_sort">
+                        <img src="/assets/organization_panel_v2/images/mobile-sort-icon.png" alt="">
+                    </div>
+                    <div class="custom-search-box position-relative">
+                        <input name="keyword" type="text" class="custom-search-input" placeholder="Search here.." id="searchInput" value="">
+                        <img src="/assets/organization_panel_v2/images/search_icon.svg" class="search-icon" alt="Search">
+                        <span id="clearSearch" class="clear-search">×</span>
+                        <div id="suggestionBox" class="suggestion-box" style="display: none;"></div>
+                    </div>
+                    <button type="submit" class="custom-search-btn">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+    <div class="row mt-15 nav" role="tablist">
+        
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 small-padding">
+            <a class="tab-card subscription-card d-flex justify-content-between align-items-center text-decoration-none" id="tab-subscriptions" href="/corporate_v2/course-catalogue?keyword=Clinical+Care+for+the+Heart+Failure+Patient&amp;page=1&amp;course_type=subscribes" role="tab" aria-selected="false">
+                <div class="d-flex align-items-center ">
+                    <div class="icon-box d-flex justify-content-center align-items-center me-3">
+                        <img src="/assets/organization_panel_v2/images/tab-icon/subscriptions-inactive.png" alt="Subscription Icon" class="inactive-icon">
+                        <img src="/assets/organization_panel_v2/images/tab-icon/subscriptions-active.png" alt="Subscription Icon" class="active-icon">
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <h4 class="mb-0 fw-bold card-heading">0</h4>
+                        <small class="card-subheading">Subscriptions</small>
+                    </div>
+                </div>
+                <div class="download-box d-flex justify-content-center align-items-center">
+                    <img src="/assets/organization_panel_v2/images/subscription_arrow_icon_orange1.svg" alt="Download Icon" class="inactive-icon">
+                    <img src="/assets/organization_panel_v2/images/subscription_arrow_icon.svg" alt="Download Icon" class="active-icon">
+                </div>
+            </a>
+        </div>
+
+        
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 small-padding">
+            <a class="tab-card subscription-card d-flex justify-content-between align-items-center text-decoration-none" id="tab-packages" href="/corporate_v2/course-catalogue?keyword=Clinical+Care+for+the+Heart+Failure+Patient&amp;page=1&amp;course_type=bundle" role="tab" aria-selected="false">
+                <div class="d-flex align-items-center">
+                    <div class="icon-box d-flex justify-content-center align-items-center me-3">
+                        <img src="/assets/organization_panel_v2/images/tab-icon/packages-inactive.png" alt="Package Icon" class="inactive-icon">
+                        <img src="/assets/organization_panel_v2/images/tab-icon/packages-active.png" alt="Package Icon" class="active-icon">
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="mb-0 fw-bold card-heading">0</h4>
+                        <small class="card-subheading">Packages</small>
+                    </div>
+                </div>
+                <div class="download-box d-flex justify-content-center align-items-center">
+                    <img src="/assets/organization_panel_v2/images/subscription_arrow_icon_orange1.svg" alt="Download Icon" class="inactive-icon">
+                    <img src="/assets/organization_panel_v2/images/subscription_arrow_icon.svg" alt="Download Icon" class="active-icon">
+                </div>
+            </a>
+        </div>
+
+        
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 small-padding">
+            <a class="tab-card subscription-card d-flex justify-content-between align-items-center text-decoration-none" id="tab-courses" href="/corporate_v2/course-catalogue?keyword=Clinical+Care+for+the+Heart+Failure+Patient&amp;page=1&amp;course_type=webinar" role="tab" aria-selected="false">
+                <div class="d-flex align-items-center">
+                    <div class="icon-box d-flex justify-content-center align-items-center me-3">
+                        <img src="/assets/organization_panel_v2/images/tab-icon/courses-inactive.png" alt="Course Icon" class="inactive-icon">
+                        <img src="/assets/organization_panel_v2/images/tab-icon/courses-active.png" alt="Course Icon" class="active-icon">
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="mb-0 fw-bold card-heading">1</h4>
+                        <small class="card-subheading">Courses</small>
+                    </div>
+                </div>
+                <div class="download-box d-flex justify-content-center align-items-center">
+                    <img src="/assets/organization_panel_v2/images/subscription_arrow_icon_orange1.svg" alt="Download Icon" class="inactive-icon">
+                    <img src="/assets/organization_panel_v2/images/subscription_arrow_icon.svg" alt="Download Icon" class="active-icon">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="seprator"></div>
+    <div class="clearfix"></div>
+
+    
+    <div id="tabContentContainer" data-url="https://staging-lms.gitview.net/corporate_v2/course-catalogue/tab-content"><div class="tab-content">
+    
+    <div class="tab-pane fade show active c-accordion  d-none " id="pane-subscriptions">
+        <a href="javascript:void(0)" class="js-btn js-is-active">
+            <h5 class="course-row-heading">Subscription (0)</h5>
+        </a>
+        <div class="accordion__body">
+            <div class="row ">
+                            </div>
+        </div>
+    </div>
+
+    
+    <div class="tab-pane fade show active c-accordion  d-none " id="pane-packages">
+        <a href="javascript:void(0)" class="js-btn js-is-active">
+            <h5 class="course-row-heading">Packages (0)</h5>
+        </a>
+        <div class="accordion__body">
+            <div class="row">
+                            </div>
+        </div>
+    </div>
+
+    
+    <div class="tab-pane fade show active c-accordion " id="pane-courses">
+        <a href="javascript:void(0)" class="js-btn js-is-active">
+            <h5 class="course-row-heading mb-0">Individual Courses Offers (1)</h5>
+        </a>
+        <div class="accordion__body">
+            <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 small-padding">
+                        <div class="card course-card">
+                            <div class="image-wrapper">
+                                <img src="/store/23908/Clinical Care for the Heart Failure Patient.png" class="card-img-top" alt="Course Image">
+                                <div class="overlay">
+                                    <h5 class="course-title">Clinical Care for the Heart Failure Patient</h5>
+                                    <p class="ceu-code">CEU: 5.00</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="description">
+                                    
+                                    Enhance your expertise in clinical care for heart failure patients. Explore types, causes, treatment, and rehabilitation. AHA-guided course.
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center price-row">
+                                    <div class="d-flex align-items-center cat_price_row">
+                                        <span class="price">$35.00</span>
+                                                                            </div>
+                                    <div class="d-flex align-items-center cat_num_row">
+                                        <label class="seat-label me-2">No. of Seats</label>
+                                        <input name="webinar_quantity_2185" type="number" value="1" min="1" class="form-control seat-input">
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center cart-row ">
+                                    <a href="https://staging-lms.gitview.net/corporate_v2/courses/clinical-care-for-the-heart-failure-patient" class="view-details">View Details</a>
+                                    <button type="button" class="btn add-cart-btn" onclick="add_webinar_organization_to_cart(2185, 528, 1900)">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+    </div>
+
+    
+    <div class="row mt-3 pagination_main">
+        <div class="d-flex align-items-center justify-content-between pagination_row">
+            
+            <span class="text-muted current-records"># of records:&nbsp;1</span>
+
+            
+            <div class="pagination mb-0 custom-pagination">
+                
+                
+            </div>
+
+            
+            <div class="page-size-selector d-flex align-items-center">
+                <div class="d-none">
+                    <label for="perPage" class="me-2 mb-0 current-records">Show</label>
+                    <select id="perPage" class="me-2">
+                                                <option value="15" selected="">15</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <span>Results</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="js-tab-counts" class="d-none" data-subscriptions="0" data-bundles="0" data-webinars="1">
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="offcanvas offcanvas-end cart-offcanvas show" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" aria-modal="true" role="dialog">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="cart_not_empty" class="">
+                <div id="cartItemsContainer">
+                            <div class="cart-div" data-cart-id="9583">
+                                <div class="cart_itemname">
+                                    <button type="button" class="del-btn js-remove-cart small_show" data-id="9583" aria-label="Remove item">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="product-name">
+                                        <h5><a href="https://staging-lms.gitview.net/courses/clinical-care-for-the-heart-failure-patient?id=MjE4NQ==">Clinical Care for the Heart Failure Patient</a></h5>
+                                        <small>CEU: 5.00</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex cart-columns">
+                                    <div class="product-quantity">
+                                        <div class="number">
+                                            <span class="minus js-qty-minus"><i class="fa fa-minus"></i></span>
+                                            <input type="text" class="js-qty-input" value="5" inputmode="numeric">
+                                            <span class="plus js-qty-plus"><i class="fa fa-plus"></i></span>
+                                        </div>
+                                        <small>No. of Seats</small>
+                                    </div>
+                                    <div class="price-div text-end">
+                                        <span class="price">$35.00</span>
+                                        
+                                    </div>
+                                    <button type="button" class="del-btn js-remove-cart small_hide" data-id="9583" aria-label="Remove item">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cart-div" data-cart-id="9584">
+                                <div class="cart_itemname">
+                                    <button type="button" class="del-btn js-remove-cart small_show" data-id="9584" aria-label="Remove item">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="product-name">
+                                        <h5><a href="https://staging-lms.gitview.net/bundles/hazmat-transportation-suite-us-iacet-ceu-0-4">HazMat Transportation Suite</a></h5>
+                                        <small>CEU: 0.43</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex cart-columns">
+                                    <div class="product-quantity">
+                                        <div class="number">
+                                            <span class="minus js-qty-minus"><i class="fa fa-minus"></i></span>
+                                            <input type="text" class="js-qty-input" value="1" inputmode="numeric">
+                                            <span class="plus js-qty-plus"><i class="fa fa-plus"></i></span>
+                                        </div>
+                                        <small>No. of Seats</small>
+                                    </div>
+                                    <div class="price-div text-end">
+                                        <span class="price">$129.00</span>
+                                        
+                                    </div>
+                                    <button type="button" class="del-btn js-remove-cart small_hide" data-id="9584" aria-label="Remove item">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cart-div" data-cart-id="9585">
+                                <div class="cart_itemname">
+                                    <button type="button" class="del-btn js-remove-cart small_show" data-id="9585" aria-label="Remove item">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="product-name">
+                                        <h5><a href="https://staging-lms.gitview.net/bundles/hazwoper-8-hr-refresher-training-29-cfr-1910-120-29-cfr-1926-65-iacet-ceu-0-8">HAZWOPER 8-Hr Refresher Training</a></h5>
+                                        <small>CEU: 0.84</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex cart-columns">
+                                    <div class="product-quantity">
+                                        <div class="number">
+                                            <span class="minus js-qty-minus"><i class="fa fa-minus"></i></span>
+                                            <input type="text" class="js-qty-input" value="2" inputmode="numeric">
+                                            <span class="plus js-qty-plus"><i class="fa fa-plus"></i></span>
+                                        </div>
+                                        <small>No. of Seats</small>
+                                    </div>
+                                    <div class="price-div text-end">
+                                        <span class="price">$55.00</span>
+                                        
+                                    </div>
+                                    <button type="button" class="del-btn js-remove-cart small_hide" data-id="9585" aria-label="Remove item">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </div>
+                            </div></div>
+
+                <div class="loading-action-cart show-load">
+                    <div class="lds-ripple">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="cart-checkout">
+                    <strong id="cartSummary">Subtotal (3 items): $414.00</strong>
+                    <a href="https://staging-lms.gitview.net/corporate_v2/checkout" class="btn btn-primary w-100 order_btn" id="proceedToCheckoutBtn">
+                        Proceed to checkout
+                    </a>
+                    <a href="#" class="btn btn-primary w-100 shopping_btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                        Continue shopping
+                    </a>
+                </div>
+            </div>
+
+            <div id="cart_empty" class="cart-mini_empty d-none">
+                <img src=" https://staging-lms.gitview.net/assets/cpr/img/page/cart/1172061-middle-removebg-preview.png" alt="">
+                <p> Cart is empty. Please add the courses to cart.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="offcanvas offcanvas-end menu-offcanvas" tabindex="-2" id="menuoffcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="menuser_information w-100">
+                <div class="d-flex">
+                    <div class="rounded-circle text-dark d-flex justify-content-center align-items-center fw-semibold name_btn">
+                        <img src="/getDefaultAvatar?item=787712&amp;name=John Doe&amp;size=40" alt="John Doe">
+                    </div>
+                    <div class="user_profiles position-relative w-100">
+                        <strong>John Doe</strong>
+                        <span>manishnewdasboard_014@gmail.com</span>
+                        <span>(987) 654-3210</span>
+                        
+                        <a class="btn border header-dropdown rounded-pill d-flex align-items-center w-100 position-relative mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/assets/organization_panel_v2/images/globe.svg" alt="Globe" width="16" height="16" class="me-1">
+                            <span class="flex-grow-1 text-truncate" style="max-width:210px;">
+                                Head Branch:  AHCA
+                            </span>
+                            <img src="/assets/organization_panel_v2/images/arrow.svg" alt="Arrow" width="16" height="16" class="arrow_img">
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=787712">Head Branch:  AHCA</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=788383"> Main Training Branch</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=788384"> Main Training Branch</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=788385"> QA_AutoBranch_04cf56</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789157"> QA_AutoBranch_5359f0</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789679"> QA_AutoBranch_5bb376</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789686"> QA_AutoBranch_59c2e0</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789831"> Main Training Branch</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789832"> QA_AutoBranch_0d6e3d</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789833"> Main Training Branch 1762980361</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789875"> Main Training Branch 1763059571</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789878"> Main Training Branch 1763062017</a></li>
+                                                                                                                                <li><a class="dropdown-item text-truncate" href="https://staging-lms.gitview.net/corporate_v2/setting/branch/swap?id=789939"> Main Training Branch 1763116484</a></li>
+                                                                                    </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button class="classic-switch-btn-mobile" onclick="window.location.href='https://staging-lms.gitview.net/corporate_v2/switch-to-v1' ">
+                        Switch to Classic Version
+                    </button>
+                </div>
+            </div>
+            <nav class="sidebar-main">
+                <div class="sidebar-row w-100">
+                    <ul class="nav flex-columnd menu-div">
+                        <li class="nav-item">
+                            <a href="/corporate_v2" class="nav-link ">
+                                <span class="spirit_icon dash_icon"></span> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/corporate_v2/course-catalogue" class="nav-link active">
+                                <span class="spirit_icon course_icon"></span> Course Catalog
+                            </a>
+                        </li><li class="nav-item">
+                            <a href="https://staging-lms.gitview.net/corporate_v2/learners" class="nav-link ">
+                                <span class="spirit_icon learners_icon"></span> Learners
+                            </a>
+                        </li>
+                                                    <li class="nav-item">
+                                <a href="https://staging-lms.gitview.net/corporate_v2/seat_code" class="nav-link ">
+                                    <span class="spirit_icon seats_icon"></span> Seats
+                                </a>
+                            </li>
+                                                <li class="nav-item">
+                            <a href="https://staging-lms.gitview.net/corporate_v2/setting/certification" class="nav-link "><span class="spirit_icon tc_icon"></span> Reporting Section</a>
+                        </li>
+                                                    <li class="nav-item">
+                                <a href="https://staging-lms.gitview.net/corporate_v2/invoice" class="nav-link ">
+                                    <span class="spirit_icon billings_icon"></span> Billings
+                                </a>
+                            </li>
+                        
+                                                    <li class="nav-item ">
+                                <a href="https://staging-lms.gitview.net/corporate_v2/setting/branch" class="nav-link"><span class="spirit_icon bs_icon"></span> Branch Settings</a>
+                            </li>
+                        
+                                                    <li class="nav-item ">
+                                <a href="https://staging-lms.gitview.net/corporate_v2/setting/manage_admin" class="nav-link"><span class="spirit_icon ma_icon"></span> Manage Admins</a>
+                            </li>
+                        
+                        <li class="nav-item ">
+                            <a href="https://staging-lms.gitview.net/corporate_v2/setting/notification" class="nav-link"><span class="spirit_icon nfc_icon"></span> Notification</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="https://staging-lms.gitview.net/corporate_v2/setting/profile" class="nav-link"><span class="spirit_icon ap_icon"></span> Edit Profile</a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="sidebar-footer m-0 w-100">
+                    <ul class="list-unstyled d-flex align-items-center w-100 mb-2">
+                        <li class="dropdown w-100">
+                            <div class="gtranslate_wrapper gt_container--wz96ug"><!-- GTranslate: https://gtranslate.com --><select class="gt_selector notranslate" aria-label="Select Language"><option value="">Select Language</option><option value="en|en" data-gt-href="#" selected="">English</option><option value="en|es" data-gt-href="#">Spanish</option></select><div id="google_translate_element2"></div></div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="menuser_information w-100 d-flex user_border_div">
+                                                    <div class="rounded-circle text-dark d-flex justify-content-center align-items-center fw-semibold name_btn">
+                                <img src="/getDefaultAvatar?item=342948&amp;name=Jessa &amp;size=40" alt="Jessa ">
+                            </div>
+                            <div class="user_profiles user_profiles2 position-relative w-100">
+                                <small>Account Executive</small>
+                                <strong>Jessa </strong>
+                                <span>1234567890</span>
+                                <img src="/assets/organization_panel_v2/images/arrow.svg" alt="Arrow" width="16" height="16" class="arrow_img01">
+                            </div>
+                                            </div>
+                    <div class="clearfix"></div>
+                    <a href="/corporate_v2/switch_to_student?student_id=787713" id="switchToStudentBtnMobile" class="sidebar-btn active mb-2" style="">
+                        <i class="bi bi-arrow-repeat"></i> Switch to Student Dashboard
+                    </a>
+                    <a href="/logout" class="sidebar-btn m-0">
+                        <i class="bi bi-box-arrow-right"></i> Log out
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+
+    
+    <div id="categoryModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Professional Information</h5>
+
+                
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+            <div class="modal-body">
+                <form method="POST" action="#">
+                    <input type="hidden" name="_token" value="WcQluGCQjtZr4pCjRe6jGcJCLypvdeEgLDPUuJuZ">
+                    
+                    <div class="form-row mb-2">
+                        <label class="mb-1">Category</label>
+                        <select name="category_id" id="categorySelect" class="form-select">
+                            <option value="">Select Category</option>
+                                                            <option value="528" selected="">
+                                    Construction
+                                </option>
+                                                            <option value="523">
+                                    Healthcare
+                                </option>
+                                                            <option value="627">
+                                    Assisted Living
+                                </option>
+                                                            <option value="526">
+                                    Therapy
+                                </option>
+                                                            <option value="623">
+                                    Education
+                                </option>
+                                                            <option value="632">
+                                    HR &amp; Compliance
+                                </option>
+                                                            <option value="633">
+                                    Transportation
+                                </option>
+                                                            <option value="1000">
+                                    Other
+                                </option>
+                                                    </select>
+                    </div>
+
+                    
+                    <div class="form-row mb-3">
+                        <label class="mb-1">Sub-Category</label>
+                        <select name="sub_category_id" id="subCategorySelect" class="form-select"><option value="">Select Subcategory</option><option value="1899">OSHA 10/30 Card</option><option value="2023">Forklift Safety</option><option value="1909">Construction Safety</option><option value="1900">HAZWOPER</option><option value="1911">Electrical Safety</option><option value="2022">NFPA 70E</option><option value="1912">General Industry</option><option value="1913">Transportation Safety</option><option value="1908">Confined Spaces</option><option value="1910">Environmental Safety</option><option value="1891">Building</option><option value="1892">Electrical</option><option value="1894">Plumbing</option><option value="1895">Residential</option><option value="1903">All Safety Courses</option></select>
+                    </div>
+
+                    <div class="form-row mb-2">
+                        <button type="submit" class="w-100 m-0 purchase-btn">Save</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    
+    <div id="switchToStudentModal" class="modal fade" tabindex="-1" aria-labelledby="switchToStudentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="switchToStudentModalLabel">Switch to Student</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="form-row mb-3">
+                    <label class="mb-1">Select Student</label>
+                    <select id="studentSelect" class="form-select">
+                        <option value="">Select Student</option>
+                        
+                    </select>
+                </div>
+
+                <div class="form-row mb-2">
+                    <button type="button" class="w-100 m-0 purchase-btn">Switch to Student</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="/assets/organization_panel_v2/js/jquery.v1.12.4.min.js?version=1763116606"></script>
+    <script src="/assets/organization_panel_v2/js/owl.carousel.js?version=1763116606"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="/assets/organization_panel_v2/js/dataTables.js?version=1763116606"></script>
+    <script src="/assets/organization_panel_v2/js/dataTables.bootstrap5.js?version=1763116606"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.2/js/responsive.bootstrap5.min.js"></script>
+    <script src="/assets/organization_panel_v2/js/main.js?version=1763116606"></script>
+    <script src="/assets/organization_panel_v2/js/cart_mini.js?version=1763116606"></script>
+    <script type="text/javascript" src="/assets/cpr/js/gtranslate.js" defer=""></script>
+
+    <script>
+        var employeeStatistics = {};
+        var codeStatistics = {};
+        var locationStatistics = {};
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.menutoggle-icon').on('click', function() {
+                $("body").toggleClass('openmenu');
+                $(".menutoggle-icon").toggleClass('active');
+            });
+        });
+    </script>
+
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "en",
+            "languages": ["en", "es"],
+            "wrapper_selector": ".gtranslate_wrapper"
+        };
+    </script>
+
+    <script>
+        $('.testimonial-sliders').owlCarousel({
+            loop: true,
+            margin: 20,
+            dots: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+
+    <script>
+        // Learner Summary Bar Chart - only initialize if element exists
+        const learnerChartEl = document.getElementById('learnerChart');
+        if (learnerChartEl) {
+            new Chart(learnerChartEl, {
+                type: 'bar',
+                data: {
+                    labels: ['All Learner', 'Registered', 'Pending Invites'],
+                    datasets: [{
+                        label: 'Learners',
+                        data: [
+                            employeeStatistics.totalStudent ?? 0,
+                            employeeStatistics.totalActiveStudent ?? 0,
+                            employeeStatistics.totalWaitingStudent ?? 0,
+                        ],
+                        backgroundColor: ['#0078C6', '#B5DFFF', '#EBF6FF'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 0,
+                                minRotation: 0
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+
+        // Seat Summary Doughnut Chart - only initialize if element exists
+        const seatChartEl = document.getElementById('seatChart');
+        if (seatChartEl) {
+            const seatCtx = seatChartEl.getContext('2d');
+
+            new Chart(seatCtx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [
+                            codeStatistics.totalCode ?? 0,
+                            codeStatistics.totalUsedCode ?? 0,
+                            codeStatistics.totalAvailableCode ?? 0,
+                        ],
+                        backgroundColor: ['#0078C6', '#B5DFFF', '#EBF6FF'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Branch Summary Doughnut Chart - only initialize if element exists
+        const branchChartEl = document.getElementById('branchChart');
+        if (branchChartEl) {
+            const branchCtx = branchChartEl.getContext('2d');
+
+            new Chart(branchCtx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: Object.values(branchStatistics),
+                        backgroundColor: ['#0078C6', '#3399E6', '#66BFFF', '#B5DFFF', '#EBF6FF'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true, // Make chart resize with container
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+    <script>
+        am5.ready(function() {
+            var chartDiv = document.getElementById("chartdiv");
+            if (!chartDiv) {
+                console.warn("Chart container #chartdiv not found. Skipping chart initialization.");
+                return; // stop script if element does not exist
+            }
+
+            var root = am5.Root.new("chartdiv");
+            root.setThemes([am5themes_Animated.new(root)]);
+
+            var chart = root.container.children.push(
+                am5map.MapChart.new(root, {
+                    panX: "none",
+                    panY: "none",
+                    wheelX: "none",
+                    wheelY: "none",
+                    projection: am5map.geoAlbersUsa()
+                })
+            );
+
+            // Remove Alaska and Hawaii
+            const filteredGeoJSON = {
+                type: "FeatureCollection",
+                features: am5geodata_usaLow.features.filter(f =>
+                    f.id !== "US-AK" && f.id !== "US-HI"
+                )
+            };
+
+            var polygonSeries = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    geoJSON: filteredGeoJSON,
+                    valueField: "value",
+                    calculateAggregates: true
+                })
+            );
+
+            // Tooltip config
+            polygonSeries.mapPolygons.template.setAll({
+                tooltipText: "{name}: {value}",
+                interactive: true
+            });
+
+            // Custom hover color
+            polygonSeries.mapPolygons.template.states.create("hover", {
+                fill: am5.color(0x0078C6)
+            });
+
+            // Custom color scale
+            polygonSeries.set("heatRules", [{
+                target: polygonSeries.mapPolygons.template,
+                dataField: "value",
+                min: am5.color(0xD6EDFF),
+                max: am5.color(0x0078C6),
+                key: "fill"
+            }]);
+
+            // Your data mapped by name
+            const stateDataByName = locationStatistics;
+
+            // Automatically build data array
+            const data = filteredGeoJSON.features.map(f => ({
+                id: f.id,
+                value: stateDataByName[f.properties.name] || 0
+            }));
+
+            polygonSeries.data.setAll(data);
+
+            // Remove amCharts logo
+            root._logo.dispose();
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.summary-box-wrapper').forEach(wrapper => {
+            const tooltip = wrapper.querySelector('.hover-tooltip');
+
+            wrapper.addEventListener('mouseenter', () => {
+                tooltip.style.display = 'block';
+                tooltip.classList.remove('left', 'right');
+
+                const rect = tooltip.getBoundingClientRect();
+                const screenRight = window.innerWidth;
+                const tooltipRight = rect.left + rect.width;
+
+                // Check if it overflows right side
+                if (tooltipRight > screenRight) {
+                    tooltip.classList.add('left');
+                } else {
+                    tooltip.classList.add('right');
+                }
+            });
+
+            wrapper.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('mobileSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const toggleBtn = document.getElementById('sidebarToggle');
+            const closeBtn = document.getElementById('sidebarClose');
+
+            toggleBtn?.addEventListener('click', () => {
+                sidebar?.classList.add('active');
+                overlay?.classList.add('active');
+            });
+
+            closeBtn?.addEventListener('click', () => {
+                sidebar?.classList.remove('active');
+                overlay?.classList.remove('active');
+            });
+
+            overlay?.addEventListener('click', () => {
+                sidebar?.classList.remove('active');
+                overlay?.classList.remove('active');
+            });
+        });
+    </script>
+
+    <script>
+        // ===== Helpers =====
+        // Safely format to money with 2 decimals
+        function fmtMoney(n) {
+            const x = Number(n);
+            return isFinite(x) ? x.toFixed(2) : '0.00';
+        }
+
+        // Basic HTML escape to avoid accidental injection
+        function esc(s) {
+            return String(s ?? '')
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+    </script>
+
+    <script>
+        function showCartLoading() {
+            $('.loading-action-cart').addClass('show-load');
+        }
+
+        function hideCartLoading() {
+            $('.loading-action-cart').removeClass('show-load');
+        }
+
+        function ajaxGetCounCart() {
+            $.ajax({
+                type: 'post',
+                url: '/carts/api/get-count-cart-mini',
+                data: {},
+                datatype: "json",
+                success: function(response) {
+                    if (response && response.code == 200) {
+                        count_cart_mini.html(response.count_cart);
+                        if (response.count_cart == 0) {
+                            count_cart_mini.addClass('d-none');
+                        } else {
+                            count_cart_mini.removeClass('d-none');
+                        }
+                    }
+                },
+                fail: function(jqXHR, ajaxOptions, thrownError) {
+                    console.log("errors")
+                }
+            });
+        }
+
+        function getCartData() {
+            showCartLoading();
+
+            $.ajax({
+                    type: 'GET',
+                    url: '/carts/api/get-cart-data',
+                    dataType: 'json'
+                })
+                .done(function(res) {
+                    const items = Array.isArray(res?.cartsItemInfo) ? res.cartsItemInfo : [];
+                    const itemCount = items.length;
+
+                    const $badge = $('.cart-count');
+                    const $cartNotEmpty = $('#cart_not_empty');
+                    const $cartEmpty = $('#cart_empty');
+                    const $container = $('#cartItemsContainer').empty();
+
+                    // Toggle empty / not empty
+                    if (itemCount > 0) {
+                        $cartNotEmpty.removeClass('d-none');
+                        $cartEmpty.addClass('d-none');
+                    } else {
+                        $cartNotEmpty.addClass('d-none');
+                        $cartEmpty.removeClass('d-none');
+                    }
+
+                    // Update badge
+                    $badge.toggleClass('d-none', itemCount === 0)
+                        .text(itemCount || '');
+
+                    // Render items
+                    items.forEach(function(item) {
+                        const price = Number(item?.price) || 0;
+                        const disc = Number(item?.discount) || 0;
+                        const discounted = Number(item?.discountedPrice) || Math.max(price - disc, 0);
+                        const pct = price > 0 && disc > 0 ? Math.round((disc / price) * 100) : 0;
+
+                        const discountBadge = pct > 0 ?
+                            `<span class="dicount-div">-${pct}%</span>` : '';
+
+                        const html = `
+                            <div class="cart-div" data-cart-id="${esc(item?.id)}">
+                                <div class="cart_itemname">
+                                    <button type="button" class="del-btn js-remove-cart small_show" 
+                                        data-id="${esc(item?.id)}" aria-label="Remove item">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="product-name">
+                                        <h5><a href="${esc(item?.itemUrl)}">${esc(item?.title)}</a></h5>
+                                        <small>CEU: ${esc(item?.ce_hours ?? '')}</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex cart-columns">
+                                    <div class="product-quantity">
+                                        <div class="number">
+                                            <span class="minus js-qty-minus"><i class="fa fa-minus"></i></span>
+                                            <input type="text" class="js-qty-input" value="${esc(item?.quantity ?? 1)}" inputmode="numeric">
+                                            <span class="plus js-qty-plus"><i class="fa fa-plus"></i></span>
+                                        </div>
+                                        <small>No. of Seats</small>
+                                    </div>
+                                    <div class="price-div text-end">
+                                        <span class="price">$${fmtMoney(discounted)}</span>
+                                        ${disc > 0 ? `<del class="old-price">$${fmtMoney(price)}</del>${discountBadge}` : ``}
+                                    </div>
+                                    <button type="button" class="del-btn js-remove-cart small_hide" 
+                                        data-id="${esc(item?.id)}" aria-label="Remove item">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </div>
+                            </div>`;
+                        $container.append(html);
+                    });
+
+                    // Update subtotal
+                    const subTotal = Number(res?.subTotal) || 0;
+                    $('#cartSummary').text(
+                        `Subtotal (${itemCount} item${itemCount === 1 ? '' : 's'}): $${fmtMoney(subTotal)}`
+                    );
+                })
+                .fail(function() {
+                    console.error('Failed to fetch cart data');
+                })
+                .always(function() {
+                    hideCartLoading();
+                });
+        }
+
+        function removeCartMini(cart_id) {
+            showCartLoading();
+            $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: 'POST',
+                    url: '/carts/api/remove-cart-mini',
+                    dataType: 'json',
+                    data: {
+                        cart_id
+                    }
+                })
+                .done(function(res) {
+                    if (res && res.code === 200) {
+                        getCartData();
+                    }
+                })
+                .fail(function() {
+                    alert('An error occurred. Contact us for support!');
+                })
+                .always(function() {
+                    // hideCartLoading();
+                });
+        }
+
+        function updateCartQuantity(cart_id, quantity) {
+            // show loading indicator on that cart item
+            const $loadingContainer = $(`.cart-div[data-cart-id="${cart_id}"]`)
+                .find('.product-quantity')
+                .addClass('show-load');
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: 'POST',
+                url: '/carts/api/update-quantity-cart-mini',
+                dataType: 'json',
+                data: {
+                    cart_id,
+                    quantity
+                },
+                success: function(response) {
+                    // if update succeeded, refresh the entire cart UI
+                    if (response && response.status) {
+                        getCartData();
+                    } else {
+                        console.error('Update failed:', response);
+                    }
+                },
+                error: function(jqXHR, textStatus) {
+                    alert('error');
+                    console.error('AJAX error:', textStatus);
+                },
+                complete: function() {
+                    // hide loading indicator
+                    $loadingContainer.removeClass('show-load');
+                }
+            });
+        }
+
+        /* ===== Optional: delegated handlers (no CSS change) =====
+           Replace your inline onclick="removeCartMini(id)" with this.
+        */
+        $(document)
+            .on('click', '.js-remove-cart', function() {
+                showCartLoading()
+                const cart_id = $(this).data('id');
+                if (cart_id != null && typeof removeCartMini === 'function') {
+                    removeCartMini(cart_id);
+                }
+            })
+            .on('click', '.js-qty-plus', function() {
+                showCartLoading()
+                const $inp = $(this).siblings('.js-qty-input');
+                const v = parseInt($inp.val(), 10) || 0;
+                $inp.val(v + 1).trigger('change');
+
+                const $div = $(this).closest('.cart-div');
+                const cart_id = $div.data('cart-id');
+                updateCartQuantity(cart_id, v + 1);
+            })
+            .on('click', '.js-qty-minus', function() {
+                showCartLoading()
+                const $inp = $(this).siblings('.js-qty-input');
+                const v = parseInt($inp.val(), 10) || 0;
+                $inp.val(Math.max(1, v - 1)).trigger('change');
+
+                const $div = $(this).closest('.cart-div');
+                const cart_id = $div.data('cart-id');
+                if (v <= 1) {
+                    // if decrement would reach zero, alert and remove item
+                    alert('This item will be removed from your cart.');
+                    removeCartMini(cart_id);
+                    return;
+                }
+
+                updateCartQuantity(cart_id, Math.max(1, v - 1));
+            });
+
+        let qtyUpdateTimers = {};
+        let lastSentQty = {};
+
+        function sendQtyUpdate(cart_id, val) {
+            if (lastSentQty[cart_id] === val) return; // tránh gọi trùng
+            lastSentQty[cart_id] = val;
+            updateCartQuantity(cart_id, val);
+        }
+
+        $(document)
+            .on('input', '.js-qty-input', function() {
+                const $inp = $(this);
+                const $div = $inp.closest('.cart-div');
+                const cart_id = $div.data('cart-id');
+                let val = parseInt($inp.val(), 10) || 1;
+
+                if (val < 1) {
+                    val = 1;
+                    $inp.val(val);
+                }
+
+                clearTimeout(qtyUpdateTimers[cart_id]);
+                qtyUpdateTimers[cart_id] = setTimeout(function() {
+                    sendQtyUpdate(cart_id, val);
+                }, 3000);
+            })
+            .on('blur', '.js-qty-input', function() {
+                const $inp = $(this);
+                const $div = $inp.closest('.cart-div');
+                const cart_id = $div.data('cart-id');
+                let val = parseInt($inp.val(), 10) || 1;
+
+                if (val < 1) {
+                    val = 1;
+                    $inp.val(val);
+                }
+
+                clearTimeout(qtyUpdateTimers[cart_id]);
+                sendQtyUpdate(cart_id, val);
+            });
+
+        $(document).on('input', '.js-qty-input', function() {
+            let val = $(this).val();
+            val = val.replace(/\D/g, '');
+            if (val === '' || parseInt(val, 10) < 1) {
+                val = 1;
+            }
+            $(this).val(val);
+        });
+
+
+        // Fetch data each time the offcanvas is shown
+        $('#offcanvasRight').on('show.bs.offcanvas', getCartData);
+
+        // Fetch data on page load to sync the badge immediately
+        $(document).ready(getCartData);
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $(".menu-div li.subnav").click(function() {
+                $(".sub_menu").toggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $(".arrow_img01").click(function() {
+                $(".user_profiles2 span,.user_profiles2 strong").toggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $(".arrow_img").click(function() {
+                $(".arrow_img").toggleClass('active');
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const wrapper = document.querySelector(".gtranslate_wrapper select");
+
+            if (wrapper) {
+                wrapper.addEventListener("change", function() {
+                    // Values look like "en|es" or "en|en"
+                    const parts = (this.value || "").split("|");
+                    const lang = parts[1] || parts[0]; // take the target language
+
+                    if (lang) {
+                        document.documentElement.setAttribute("lang", lang);
+                        document.body.classList.remove("lang-en", "lang-es");
+                        document.body.classList.add("lang-" + lang);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        function handleProceedToCheckout() {
+            const proceedBtn = document.getElementById('proceedToCheckoutBtn');
+            if (!proceedBtn) return;
+
+            proceedBtn.classList.add('loadingcart');
+            proceedBtn.disabled = true;
+            proceedBtn.textContent = 'Processing...';
+
+            const originalHref = proceedBtn.href;
+            window.location.href = originalHref;
+
+            setTimeout(() => {
+                proceedBtn.classList.remove('loadingcart');
+                proceedBtn.disabled = false;
+                proceedBtn.textContent = 'Proceed to checkout';
+                // proceedBtn.href = originalHref;
+                // window.location.href = originalHref;
+            }, 5000);
+        }
+
+        // Attach event listener khi DOM loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const proceedBtn = document.getElementById('proceedToCheckoutBtn');
+
+            if (proceedBtn) {
+                proceedBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    handleProceedToCheckout();
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Hide buttons initially
+            $('#switchToStudentBtn, #switchToStudentBtnMobile').hide();
+
+            // Function to update modal with students list
+            function updateSwitchToStudentModal(students) {
+                const selectElement = $('#studentSelect');
+                selectElement.empty().append('<option value="">Select Student</option>');
+                students.forEach(function(student) {
+                    selectElement.append('<option value="' + student.id + '">' + student.first_name + ' ' + student.last_name + '</option>')
+                })
+            };
+
+            // Call AJAX to get students list
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: 'GET',
+                url: '/corporate_v2/get_switch_students',
+                dataType: 'json',
+                success: function(students) {
+                    if (students && Array.isArray(students)) {
+                        const studentCount = students.length;
+
+                        if (studentCount <= 1) {
+                            if (studentCount === 1) {
+                                const studentId = students[0].id;
+                                $('#switchToStudentBtn, #switchToStudentBtnMobile').attr('href', '/corporate_v2/switch_to_student?student_id=' + studentId);
+                            } else {
+                                $('#switchToStudentBtn, #switchToStudentBtnMobile').attr('href', '/corporate_v2/switch_to_student');
+                            }
+
+                            $('#switchToStudentBtn, #switchToStudentBtnMobile').removeAttr('data-bs-toggle data-bs-target').show();
+                        } else {
+                            updateSwitchToStudentModal(students);
+                            $('#switchToStudentBtn, #switchToStudentBtnMobile').show();
+                        }
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error fetching students:', error);
+                    $('#switchToStudentBtn, #switchToStudentBtnMobile').attr('href', '/corporate_v2/switch_to_student').removeAttr('data-bs-toggle data-bs-target').show();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Get user ID from PHP
+        const userId = 787712;
+        const cookieName = 'ribbon_corp_v1';
+        // const cookieName = 'ribbon_corp_v1_' + userId;
+
+        function hideV2Ribbon() {
+            const ribbon = document.querySelector('.v2-ribbon');
+            if (ribbon) {
+                ribbon.style.display = 'none';
+                ribbon.classList.remove('show');
+
+                // Save cookie with user ID
+                const expiryDate = new Date();
+                expiryDate.setTime(expiryDate.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
+                document.cookie = cookieName + '=true; expires=' + expiryDate.toUTCString() + '; path=/';
+            }
+        }
+
+        // Check cookie when loading page
+        function checkV2RibbonVisibility() {
+            const cookie = getCookie(cookieName);
+            const ribbon = document.querySelector('.v2-ribbon');
+
+            if (ribbon) {
+                if (cookie === 'true') {
+                    // Already closed before - keep hidden
+                    ribbon.style.display = 'none';
+                    ribbon.classList.remove('show');
+                } else {
+                    // Not closed - show ribbon
+                    ribbon.style.display = 'block';
+                    ribbon.classList.add('show');
+                }
+            }
+        }
+
+        // Helper function to get cookie
+        function getCookie(name) {
+            const value = "; " + document.cookie;
+            const parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+            return null;
+        }
+
+        // Run when DOM loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            checkV2RibbonVisibility();
+        });
+    </script>
+
+            <script>
+        /**
+         * ==========================================
+         * Constants (Blade routes)
+         * ==========================================
+         */
+        const MAIN_PAGE_URL = "https://staging-lms.gitview.net/corporate_v2/course-catalogue";
+        const TAB_CONTENT_URL = "https://staging-lms.gitview.net/corporate_v2/course-catalogue/tab-content";
+
+        /**
+         * ==========================================
+         * URL & Label Helpers
+         * ==========================================
+         */
+
+        /** Convert any URL (including /tab-content) into main page URL while preserving its query string. */
+        function toMainPageUrl(rawUrl) {
+            const u = new URL(rawUrl, window.location.origin);
+            const qs = u.searchParams.toString();
+            return qs ? (MAIN_PAGE_URL + '?' + qs) : MAIN_PAGE_URL;
+        }
+
+        /** Build a URL from the current location but removing specific keys; always reset page=1. */
+        function buildUrlWithout(keys = []) {
+            const url = new URL(window.location.href);
+            const sp = url.searchParams;
+            keys.forEach(k => sp.delete(k));
+            sp.set('page', 1);
+            return url.pathname + '?' + sp.toString();
+        }
+
+        /** Compute CEU badge label (try quick range match first, then fallback patterns). */
+        function computeCeuBadgeLabel(qMin, qMax, ranges) {
+            for (const r of (ranges || [])) {
+                const rmin = (r.min === null ? null : String(r.min));
+                const rmax = (r.max === null ? null : String(r.max));
+                if (String(qMin) === rmin && (String(qMax) === rmax || (qMax === null && rmax === 'null'))) {
+                    return r.label;
+                }
+            }
+            if (qMin !== null && qMax !== null) return `CEU: ${qMin} - ${qMax}`;
+            if (qMin !== null && qMax === null) return `CEU: ≥ ${qMin}`;
+            if (qMin === null && qMax !== null) return `CEU: ≤ ${qMax}`;
+            return null;
+        }
+
+        /**
+         * ==========================================
+         * Badges Rendering (parent toolbar)
+         * ==========================================
+         */
+
+        /** Render badges inside #filterBadges based on current URL params. */
+        function renderBadgesFromURL() {
+            const $wrap = $('#filterBadges');
+            if (!$wrap.length) return;
+
+            // Read config maps from data-* (in Blade HTML)
+            const courseTypeMap = $wrap.data('course-type-map') || {};
+            const sortOptions = $wrap.data('sort-options') || {};
+            const stateMap = $wrap.data('state-map') || {};
+            const ceuRanges = $wrap.data('ceu-ranges') || [];
+
+            // Current params
+            const url = new URL(window.location.href);
+            const sp = url.searchParams;
+
+            const course_type = sp.get('course_type');
+            const stateId = sp.get('filter_option_id');
+            const ceMinRaw = sp.get('ce_hours_min');
+            const ceMaxRaw = sp.get('ce_hours_max');
+            const sort = sp.get('sort');
+
+            const qMin = ceMinRaw !== null ? (ceMinRaw === '' ? null : ceMinRaw) : null;
+            const qMax = ceMaxRaw !== null ? (ceMaxRaw === '' ? null : ceMaxRaw) : null;
+
+            const hasCourseType = !!course_type;
+            const hasState = !!stateId;
+            const hasCEU = (qMin !== null && qMin !== '') || (qMax !== null && qMax !== '');
+            const hasSort = !!sort;
+            const hasAny = hasCourseType || hasState || hasCEU || hasSort;
+
+            // Build badges HTML
+            const parts = [];
+
+            if (hasCourseType) {
+                const label = courseTypeMap[course_type] || (course_type.charAt(0).toUpperCase() + course_type.slice(1));
+                parts.push(`
+                    <a href="${buildUrlWithout(['course_type'])}"
+                        class="alert d-inline-flex align-items-center text-decoration-none" role="alert">
+                        <span class="me-2">${label}</span>
+                        <span class="btn-close" aria-label="Close">x</span>
+                    </a>`);
+            }
+
+            if (hasState) {
+                const label = stateMap[String(stateId)] || stateId;
+                parts.push(`
+                    <a href="${buildUrlWithout(['filter_option_id'])}"
+                        class="alert d-inline-flex align-items-center text-decoration-none" role="alert">
+                        <span class="me-2">${label}</span>
+                        <span class="btn-close" aria-label="Close">x</span>
+                    </a>`);
+            }
+
+            if (hasCEU) {
+                const ceuLabel = computeCeuBadgeLabel(qMin, qMax, ceuRanges);
+                if (ceuLabel) {
+                    parts.push(`
+                        <a href="${buildUrlWithout(['ce_hours_min','ce_hours_max'])}"
+                            class="alert d-inline-flex align-items-center text-decoration-none" role="alert">
+                            <span class="me-2">${ceuLabel}</span>
+                            <span class="btn-close" aria-label="Close">x</span>
+                        </a>`);
+                }
+            }
+
+            if (hasSort) {
+                const label = sortOptions[sort] || sort;
+                parts.push(`
+                    <a href="${buildUrlWithout(['sort'])}"
+                        class="alert d-inline-flex align-items-center text-decoration-none" role="alert">
+                        <span class="me-2">${label}</span>
+                        <span class="btn-close" aria-label="Close">x</span>
+                    </a>`);
+            }
+
+            if (hasAny) {
+                // Remove all filters + keyword when clearing all
+                parts.push(`
+                    <a href="${buildUrlWithout(['course_type','filter_option_id','ce_hours_min','ce_hours_max','sort','keyword'])}"
+                        class="alert cursor-pointer d-inline-flex align-items-center text-decoration-none" role="alert">
+                        <span class="me-2">Clear All</span>
+                        <span class="btn-close" aria-label="Close">x</span>
+                    </a>`);
+            }
+
+            // Inject & show/hide
+            $wrap.html(parts.join(''));
+            $wrap.toggleClass('d-none', !hasAny);
+        }
+
+        /**
+         * ==========================================
+         * Tablist sync (active + aria-selected + href)
+         * ==========================================
+         */
+
+        /** Sync tab active state & aria-selected from current URL (course_type param). */
+        function syncTablistFromURL() {
+            const sp = new URL(window.location.href).searchParams;
+            const courseType = sp.get('course_type'); // 'subscribes' | 'bundle' | 'webinar' | null
+
+            const tabs = [{
+                    id: '#tab-subscriptions',
+                    type: 'subscribes'
+                },
+                {
+                    id: '#tab-packages',
+                    type: 'bundle'
+                },
+                {
+                    id: '#tab-courses',
+                    type: 'webinar'
+                },
+            ];
+
+            tabs.forEach(t => {
+                const $a = $(t.id);
+                if (!$a.length) return;
+
+                const isActive = (courseType === t.type);
+                $a.toggleClass('active', isActive)
+                    .attr('aria-selected', isActive ? 'true' : 'false');
+
+                // Keep hrefs updated to preserve other params
+                const url = new URL(window.location.href);
+                if (isActive) {
+                    // clicking active tab should remove course_type (go to "All")
+                    url.searchParams.delete('course_type');
+                } else {
+                    url.searchParams.set('course_type', t.type);
+                }
+                url.searchParams.set('page', 1);
+                $a.attr('href', url.pathname + '?' + url.searchParams.toString());
+            });
+        }
+
+        /**
+         * ==========================================
+         * UI Helpers
+         * ==========================================
+         */
+
+        /** Show/Hide "Clear Search" (×) button. */
+        function updateClearButtonVisibility() {
+            const $clearBtn = $('#clearSearch');
+            const $searchInput = $('#searchInput');
+            if (!$clearBtn.length || !$searchInput.length) return;
+            const hasValue = ($searchInput.val() || '').trim() !== '';
+            $clearBtn.toggleClass('d-none', !hasValue);
+        }
+
+        /** Simple accordion toggle for any static accordions */
+        function accordionToggle() {
+            $('.c-accordion .js-btn').off('click').on('click', function() {
+                $(this).toggleClass('js-is-active');
+            });
+        }
+
+        function syncTabCountsFromPartial() {
+            const $counts = $('#js-tab-counts');
+            if (!$counts.length) return; // no hook found, skip
+
+            // Read numbers from data-* attributes
+            const subs = parseInt($counts.data('subscriptions'), 10) || 0;
+            const buns = parseInt($counts.data('bundles'), 10) || 0;
+            const webs = parseInt($counts.data('webinars'), 10) || 0;
+
+            // Update the visible numbers in the Tablist
+            $('#tab-subscriptions .card-heading').text(subs);
+            $('#tab-packages .card-heading').text(buns);
+            $('#tab-courses .card-heading').text(webs);
+        }
+
+        /**
+         * ==========================================
+         * Mobile filter toggle
+         * ==========================================
+         */
+        document.getElementById("mobile_sort").onclick = function() {
+            document.getElementById("filter-bar").classList.toggle("opendiv");
+        };
+
+        /**
+         * ==========================================
+         * Search Suggestion (original behavior)
+         * ==========================================
+         */
+        $(function() {
+            const $input = $("#searchInput");
+            const $box = $("#suggestionBox");
+            const $form = $("#searchForm");
+            let timer = null;
+            let activeIndex = -1;
+
+            $input.on("keyup", function(e) {
+                const val = $input.val().trim();
+                clearTimeout(timer);
+
+                if (["ArrowUp", "ArrowDown", "Enter", "Escape"].includes(e.key)) {
+                    handleKey(e);
+                    return;
+                }
+
+                if (val.length < 3) {
+                    hideBox();
+                    return;
+                }
+
+                timer = setTimeout(() => {
+                    $.ajax({
+                        url: "https://staging-lms.gitview.net/corporate_v2/course-catalogue/get-classes",
+                        type: "GET",
+                        data: {
+                            keyword: val
+                        },
+                        success: function(res) {
+                            const items = (res && res.classes && res.classes.data) ? res.classes.data : [];
+                            renderSuggestions(items, val);
+                        },
+                        error: function() {
+                            hideBox();
+                        }
+                    });
+                }, 300);
+            });
+
+            $(document).on("click", ".suggestion-item", function() {
+                const text = $(this).find(".sug-title").text();
+                $input.val(text);
+                hideBox();
+                $form.trigger("submit"); // intercepted by AJAX loader
+            });
+
+            $(document).on("click", function(e) {
+                if (!$(e.target).closest(".custom-search-box").length) hideBox();
+            });
+
+            function handleKey(e) {
+                const $items = $box.find(".suggestion-item");
+                if (!$items.length) return;
+
+                if (e.key === "ArrowDown") {
+                    e.preventDefault();
+                    activeIndex = (activeIndex + 1) % $items.length;
+                    highlight($items);
+                } else if (e.key === "ArrowUp") {
+                    e.preventDefault();
+                    activeIndex = (activeIndex - 1 + $items.length) % $items.length;
+                    highlight($items);
+                } else if (e.key === "Enter") {
+                    e.preventDefault();
+                    if (activeIndex >= 0) $items.eq(activeIndex).click();
+                    else $form.trigger("submit");
+                } else if (e.key === "Escape") {
+                    hideBox();
+                }
+            }
+
+            function renderSuggestions(items, keyword) {
+                if (!items.length) {
+                    hideBox();
+                    return;
+                }
+                const top = items.slice(0, 8).map(mapItemHtml.bind(null, keyword)).join("");
+                const html = `<ul>${top}</ul>`;
+                $box.html(html).show();
+                activeIndex = -1;
+            }
+
+            function mapItemHtml(keyword, it) {
+                let type = "Course";
+                if (it.bundle_id) type = "Bundle";
+                else if (it.webinar_id) type = "Webinar";
+                else if (it.subscribe_id) type = "Subscribe";
+
+                const safeTitle = escapeHtml(it.title || "");
+                const rx = new RegExp("(" + escapeRegExp(keyword) + ")", "ig");
+                const highlighted = safeTitle.replace(rx, "<mark>$1</mark>");
+
+                return `
+                    <li class="suggestion-item" data-id="${it.id}" data-type="${type}">
+                        <span class="sug-title">${highlighted}</span>
+                    </li>`;
+            }
+
+            function highlight($items) {
+                $items.removeClass("is-active");
+                if (activeIndex >= 0) {
+                    const $target = $items.eq(activeIndex).addClass("is-active");
+                    const box = $box.get(0),
+                        el = $target.get(0);
+                    const top = el.offsetTop,
+                        bottom = top + el.offsetHeight;
+                    if (top < box.scrollTop) box.scrollTop = top;
+                    else if (bottom > box.scrollTop + box.clientHeight) box.scrollTop = bottom - box.clientHeight;
+                }
+            }
+
+            function hideBox() {
+                $box.hide().empty();
+                activeIndex = -1;
+            }
+
+            function escapeHtml(str) {
+                return (str || "").replace(/[&<>"']/g, s => ({
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    "\"": "&quot;",
+                    "'": "&#39;"
+                } [s]));
+            }
+
+            function escapeRegExp(str) {
+                return (str || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            }
+        });
+
+        /**
+         * ==========================================
+         * Master AJAX loader (Filter/Search/Tablist/Pagination/PerPage/Toggle/Clear)
+         * ==========================================
+         */
+        (function() {
+            const $container = $('#tabContentContainer');
+            const ajaxURL = TAB_CONTENT_URL;
+
+            // Spinner while fetching
+            function showLoading() {
+                $container.html(
+                    '<div class="w-100 d-flex justify-content-center align-items-center py-5">' +
+                    '<div class="spinner-border" role="status" aria-hidden="true"></div>' +
+                    '<span class="ms-2">Loading...</span>' +
+                    '</div>'
+                );
+            }
+
+            function getCurrentQueryString() {
+                const url = new URL(window.location.href);
+                return url.searchParams.toString();
+            }
+
+            /**
+             * Merge-like apply for one filter group ONLY.
+             * We preserve all current params, and only replace/remove keys of the target group.
+             * @param  {'course_type'|'state'|'ceu'|'sort'} group
+             * @param  {string} href
+             * @returns  {string} normalized main page URL with new query
+             */
+            function applyFilterGroupChange(group, href) {
+                const curr = new URL(window.location.href);
+                const link = new URL(href, window.location.origin);
+
+                const sp = curr.searchParams;
+                const lp = link.searchParams;
+
+                const setOrDelete = (key) => {
+                    if (lp.has(key)) sp.set(key, lp.get(key));
+                    else sp.delete(key); // toggle off if link doesn't have it
+                };
+
+                switch (group) {
+                    case 'course_type':
+                        setOrDelete('course_type');
+                        break;
+                    case 'state':
+                        setOrDelete('filter_option_id');
+                        break;
+                    case 'ceu':
+                        setOrDelete('ce_hours_min');
+                        setOrDelete('ce_hours_max');
+                        break;
+                    case 'sort':
+                        setOrDelete('sort');
+                        break;
+                }
+
+                // Always reset page
+                sp.set('page', 1);
+
+                return curr.pathname + '?' + sp.toString();
+            }
+
+            /**
+             * Load tab content. If targetUrl provided, use it (normalized to main page in pushState).
+             * @param  {string|null} targetUrl
+             */
+            function loadTabContent(targetUrl = null) {
+                showLoading();
+
+                let qs = null;
+                if (targetUrl) {
+                    const u = new URL(targetUrl, window.location.origin);
+                    qs = u.searchParams.toString();
+                } else {
+                    qs = getCurrentQueryString();
+                }
+                const reqUrl = qs ? (ajaxURL + '?' + qs) : ajaxURL;
+
+                $.get(reqUrl)
+                    .done(function(html) {
+                        $container.html(html);
+
+                        syncTabCountsFromPartial();
+
+                        // Re-bind accordions inside injected HTML
+                        $('.c-accordion .js-btn').off('click').on('click', function() {
+                            $(this).toggleClass('js-is-active');
+                        });
+
+                        // Bind controls inside partial
+                        bindInnerPagination();
+                        bindInnerPerPage();
+
+                        // Re-render in parent
+                        renderBadgesFromURL();
+                        syncTablistFromURL();
+                        updateClearButtonVisibility();
+                    })
+                    .fail(function() {
+                        $container.html('<div class="alert alert-danger m-3">Failed to load courses. Please try again.</div>');
+                    });
+
+                // Normalize the browser URL to the main page (avoid /tab-content in address bar)
+                if (targetUrl) {
+                    const normalized = toMainPageUrl(targetUrl);
+                    window.history.pushState({}, '', normalized);
+                }
+            }
+
+            // Intercept pagination links INSIDE the partial
+            function bindInnerPagination() {
+                $('.tab-content .custom-pagination a').off('click').on('click', function(e) {
+                    const href = $(this).attr('href');
+                    if (!href) return;
+                    e.preventDefault();
+                    loadTabContent(href);
+                });
+            }
+
+            // Bind perPage selector INSIDE the partial
+            function bindInnerPerPage() {
+                $('#perPage').off('change').on('change', function() {
+                    const perPage = this.value;
+                    const url = new URL(window.location.href);
+                    url.searchParams.set('page', 1);
+                    url.searchParams.set('filter_paginate', perPage);
+                    loadTabContent(url.toString());
+                });
+            }
+
+            // ===== Filter handlers (group-aware merge) =====
+
+            // Course Type
+            $(document).on('click', '.filter-item-course .dropdown-menu a', function(e) {
+                const href = $(this).attr('href');
+                if (!href) return;
+                e.preventDefault();
+                const target = applyFilterGroupChange('course_type', href);
+                loadTabContent(target);
+            });
+
+            // State
+            $(document).on('click', '.filter-item-state .dropdown-menu a', function(e) {
+                const href = $(this).attr('href');
+                if (!href) return;
+                e.preventDefault();
+                const target = applyFilterGroupChange('state', href);
+                loadTabContent(target);
+            });
+
+            // CEU quick options (links). Custom range form handled below.
+            $(document).on('click', '.filter-item-ceu .dropdown-menu a', function(e) {
+                const href = $(this).attr('href');
+                if (!href) return;
+                e.preventDefault();
+                const target = applyFilterGroupChange('ceu', href);
+                loadTabContent(target);
+            });
+
+            // Sort
+            $(document).on('click', '.filter-item-sort .dropdown-menu a', function(e) {
+                const href = $(this).attr('href');
+                if (!href) return;
+                e.preventDefault();
+                const target = applyFilterGroupChange('sort', href);
+                loadTabContent(target);
+            });
+
+            // Tab cards (Subscriptions/Packages/Courses) -> act like course_type filter
+            $(document).on('click', '.tab-card', function(e) {
+                const href = $(this).attr('href');
+                if (!href) return;
+                e.preventDefault();
+                const target = applyFilterGroupChange('course_type', href);
+                loadTabContent(target);
+            });
+
+            // Badges (including Clear All)
+            $(document).on('click', '.badges a.alert', function(e) {
+                const href = $(this).attr('href');
+                if (!href) return;
+                e.preventDefault();
+
+                // If this is the Clear All badge, also clear search input & hide suggestion
+                if ($(this).text().trim().includes('Clear All')) {
+                    $('#searchInput').val('');
+                    $('#suggestionBox').hide().empty();
+                    updateClearButtonVisibility();
+                }
+
+                loadTabContent(href);
+            });
+
+            // CEU custom range form (keeps hidden inputs for other params)
+            $(document).on('submit', '.ceu-custom-range', function(e) {
+                e.preventDefault();
+                const action = $(this).attr('action'); // url()->current()
+                const qs = $(this).serialize(); // includes other params + page=1
+                const target = action + '?' + qs;
+                loadTabContent(target);
+            });
+
+            // SEARCH: intercept submit and merge with existing params
+            $('#searchForm').off('submit').on('submit', function(e) {
+                e.preventDefault();
+                const action = $(this).attr('action'); // MAIN_PAGE_URL
+                const params = new URLSearchParams($(this).serialize());
+
+                // Preserve existing params except keyword & page
+                const curr = new URL(window.location.href);
+                curr.searchParams.forEach((v, k) => {
+                    if (!['keyword', 'page'].includes(k) && !params.has(k)) {
+                        params.append(k, v);
+                    }
+                });
+                params.set('page', 1);
+
+                const target = action + '?' + params.toString();
+                loadTabContent(target);
+            });
+
+            // ===========================
+            // Clear Search (×) button
+            // ===========================
+            const $clearBtn = $('#clearSearch');
+            const $searchInput = $('#searchInput');
+            const $suggestionBox = $('#suggestionBox');
+
+            $(document).ready(updateClearButtonVisibility);
+            $searchInput.on('input', updateClearButtonVisibility);
+
+            // Clicking × in the search box
+            $clearBtn.off('click').on('click', function(e) {
+                e.preventDefault();
+                $searchInput.val('');
+                $suggestionBox.hide().empty();
+                updateClearButtonVisibility();
+
+                const url = new URL(window.location.href);
+                url.searchParams.delete('keyword');
+                url.searchParams.set('page', 1);
+                loadTabContent(url.toString());
+            });
+
+            // Toggle "Courses available for purchase" (AJAX)
+            const $toggle = $('#courseToggle');
+            if ($toggle.length) {
+                $toggle.off('change').on('change', function() {
+                    const url = new URL(window.location.href);
+                    url.searchParams.set("is_purchased", this.checked ? 1 : 0);
+                    url.searchParams.set("page", 1);
+                    loadTabContent(url.toString());
+                });
+            }
+
+            // Browser back/forward support
+            window.addEventListener('popstate', function() {
+                loadTabContent(null);
+                syncTablistFromURL();
+                renderBadgesFromURL();
+                updateClearButtonVisibility();
+            });
+
+            // Initial bindings
+            $(document).ready(function() {
+                accordionToggle(); // static accordions on first paint
+                renderBadgesFromURL(); // badges match initial URL
+                syncTablistFromURL(); // tablist match initial URL
+                loadTabContent(null); // first AJAX content load
+            });
+        })();
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Decide whether to force the modal to stay open
+            const forceStay = false;
+            const modalEl = document.getElementById('categoryModal');
+
+            // When locked, disable ESC and outside click
+            const modalOptions = forceStay ? {
+                backdrop: 'static',
+                keyboard: false
+            } : {};
+            var myModal = new bootstrap.Modal(modalEl, modalOptions);
+
+            
+            // 
+            // Extra safety: block any attempt to hide before successful save
+            if (forceStay) {
+                modalEl.addEventListener('hide.bs.modal', function(e) {
+                    if (!window.__categoryModalCanClose) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    </script>
+
+    
+    <script>
+        $(function() {
+            const rawData = [{"id":528,"sub":[{"id":1899,"title":"OSHA 10\/30 Card"},{"id":2023,"title":"Forklift Safety"},{"id":1909,"title":"Construction Safety"},{"id":1900,"title":"HAZWOPER"},{"id":1911,"title":"Electrical Safety"},{"id":2022,"title":"NFPA 70E"},{"id":1912,"title":"General Industry"},{"id":1913,"title":"Transportation Safety"},{"id":1908,"title":"Confined Spaces"},{"id":1910,"title":"Environmental Safety"},{"id":1891,"title":"Building"},{"id":1892,"title":"Electrical"},{"id":1894,"title":"Plumbing"},{"id":1895,"title":"Residential"},{"id":1903,"title":"All Safety Courses"}]},{"id":523,"sub":[{"id":1850,"title":"Physicians"},{"id":1854,"title":"Pharmacist"},{"id":1851,"title":"Registered Nurse"},{"id":1847,"title":"Nurse Practitioner"},{"id":2013,"title":"Laboratory Services"},{"id":2014,"title":"Dental Services"},{"id":2015,"title":"EMT"},{"id":2016,"title":"Mental Health"},{"id":2017,"title":"Optician"},{"id":2018,"title":"Obstetrician"},{"id":2019,"title":"Hospital Staff"},{"id":2020,"title":"Other"}]},{"id":627,"sub":[{"id":1888,"title":"Assisted Living Facility Manager"},{"id":1889,"title":"Assisted Living Nursing"},{"id":1890,"title":"Caregivers"},{"id":1914,"title":"ALF Training"},{"id":1866,"title":"Assisted Living"},{"id":2012,"title":"Home Health Aide"}]},{"id":526,"sub":[{"id":1885,"title":"Athletic Trainers"},{"id":1886,"title":"Massage Therapy"},{"id":1887,"title":"Occupational Therapy"},{"id":1862,"title":"Physical Therapy"}]},{"id":623,"sub":[{"id":1879,"title":"Teachers"},{"id":1878,"title":"Elementary"},{"id":1856,"title":"Child Care Provider"}]},{"id":632,"sub":[{"id":2021,"title":"HIPAA"},{"id":1897,"title":"HR \u0026 Legal"},{"id":1904,"title":"HR \u0026 Ethics"},{"id":1898,"title":"Workplace Safety"},{"id":1905,"title":"Sexual Harassment"},{"id":1906,"title":"Privacy"},{"id":1907,"title":"Information Security"},{"id":1902,"title":"All HR Courses"},{"id":1915,"title":"Active Shooter"}]},{"id":633,"sub":[]},{"id":1000,"sub":[{"id":2000,"title":"Personal Trainers"},{"id":2001,"title":"Agriculture"},{"id":2002,"title":"Aerospace"},{"id":2003,"title":"HR Services"},{"id":2004,"title":"Telecom"},{"id":2005,"title":"Marketing"},{"id":2006,"title":"Financial Services"},{"id":2007,"title":"Hospitality"},{"id":2008,"title":"Retail"},{"id":2009,"title":"Government"},{"id":2010,"title":"Non Profit Organizations"},{"id":2011,"title":"Other"}]}];
+
+            // Build a map for quick lookup: categoryId -> [sub...]
+            const categoryDataMap = {};
+            rawData.forEach(cat => {
+                categoryDataMap[cat.id] = cat.sub || [];
+            });
+
+            // Current user's saved subcategory ID
+            const authSubId = 1900;
+
+            // Rebuild subCategorySelect options
+            function updateSubcategories(initial = false) {
+                const selectedCatId = parseInt($('#categorySelect').val(), 10);
+                const subs = categoryDataMap[selectedCatId] || [];
+
+                const $subSel = $('#subCategorySelect')
+                    .empty()
+                    .append('<option value="">Select Subcategory</option>');
+
+                subs.forEach(s => {
+                    $subSel.append(`<option value="${s.id}">${s.title}</option>`);
+                });
+
+                if (initial && authSubId) {
+                    $subSel.val(String(authSubId));
+                }
+            }
+
+            // Bind change event to categorySelect
+            $('#categorySelect').on('change', function() {
+                updateSubcategories(false);
+            });
+
+            // Initial population on page load
+            updateSubcategories(true);
+        });
+    </script>
+
+    
+    <script>
+        $(function() {
+            $('#categoryModal').on('click', '.purchase-btn', function(e) {
+                e.preventDefault(); // prevent default submit
+
+                const $btn = $(this);
+                const category_id = $('#categorySelect').val();
+                const sub_category_id = $('#subCategorySelect').val();
+
+                $btn.prop('disabled', true);
+
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: 'POST',
+                    url: '/corporate_v2/ajax/update_category',
+                    dataType: 'json',
+                    data: {
+                        category_id,
+                        sub_category_id
+                    },
+                    success: function(response) {
+                        // Allow modal to close (if you ever switch from reload to hide)
+                        window.__categoryModalCanClose = true;
+
+                        // Keep current UX: reload after save
+                        window.location.reload();
+                    },
+                    error: function(jqXHR, textStatus) {
+                        console.error('AJAX error:', textStatus);
+                        alert('Update failed');
+                    },
+                    complete: function() {
+                        $btn.prop('disabled', false);
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            $('#switchToStudentModal').on('click', '.purchase-btn', function(e) {
+                e.preventDefault();
+
+                const student_id = $('#studentSelect').val();
+
+                if (!student_id) {
+                    alert('Please select a student');
+                    return;
+                }
+
+                // Redirect directly instead of AJAX POST
+                window.location.href = '/corporate_v2/switch_to_student?student_id=' + student_id;
+            });
+        });
+    </script>
+
+
+
+
+<div class="offcanvas-backdrop fade show"></div></body></html>

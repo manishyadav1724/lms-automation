@@ -69,3 +69,4 @@ def test_course_buy_from_catalog(driver):
             .place_order())
 
     assert driver.title != ""
+    driver.quit()

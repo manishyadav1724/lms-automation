@@ -15,3 +15,4 @@ def test_open_notifications(driver):
     # Example: assert a notifications container exists, if you know its locator.
     # For now, just ensure we didn't navigate away to an error page:
     assert "corporate_v2" in driver.current_url or driver.title != ""
+    driver.quit()

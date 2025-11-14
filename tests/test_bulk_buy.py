@@ -4,14 +4,17 @@ from Pages.dashboard_page import DashboardPage
 
 def test_bulk_buy(driver):
     LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
-    dash = DashboardPage(driver).go_to_v2_from_current()
+
+    # Navigate to dashboard (keep V1, do NOT switch to V2)
+    dash = DashboardPage(driver)
+    # dash = DashboardPage(driver).go_to_v2_from_current()  #  Commented out to stay on V1
 
     checkout = (dash.open_purchase_seats()
                     .search_course("Clinical Care for the Heart Failure Patient")
                     .add_first_result_to_cart()
                     .proceed_to_checkout())
 
-    # same Stripe mock payment
+    # Simulate Stripe mock payment
     checkout.fill_cardholder("Manish Yadav") \
             .fill_card_number("4242424242424242") \
             .fill_expiry("12/32") \
@@ -22,3 +25,4 @@ def test_bulk_buy(driver):
             .place_order()
 
     assert driver.title != ""
+    driver.quit()

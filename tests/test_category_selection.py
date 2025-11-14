@@ -6,7 +6,7 @@ def test_verify_category_selection_in_profile(driver):
     LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
 
     # Go to corporate_v2
-    driver.get(driver.current_url.replace("/corporate", "/corporate_v2"))
+    #driver.get(driver.current_url.replace("/corporate", "/corporate_v2"))
 
     # Open profile -> Edit Profile
     Header(driver).open_profile_menu(alt_text="John Doe").go_to_edit_profile()
@@ -18,3 +18,4 @@ def test_verify_category_selection_in_profile(driver):
         .save_changes()
 
     # (Optional) Reopen to verify persisted values with real asserts, if needed.
+    driver.quit()

@@ -1,0 +1,18 @@
+Test Run Report
+================
+Start Time : 2025-11-12 19:59:02
+End Time   : 2025-11-12 19:59:13
+Total Time : 10.957 seconds
+
+Summary
+-------
+Total tests run : 0
+Passed          : 0
+Failed          : 0
+Skipped         : 0
+Unknown         : 0
+
+Details (test, outcome, duration seconds)
+-----------------------------------------------------
+
+End of report

@@ -1,0 +1,358 @@
+Test Run Report
+================
+Start Time : 2025-11-12 19:04:16
+End Time   : 2025-11-12 19:17:54
+Total Time : 818.649 seconds
+
+Summary
+-------
+Total tests run : 17
+Passed          : 2
+Failed          : 15
+Skipped         : 0
+Unknown         : 0
+
+Details (test, outcome, duration seconds)
+-----------------------------------------------------
+tests/Test_logout.py::test_logout_functionality  |  failed  |  66.464
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_logout_functionality(driver):
+        # Login
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\Test_logout.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:16: in login
+    self.click(self.CONTINUE)
+base\base_page.py:179: in click
+    el.click()
+.venv\Lib\site-packages\selenium\webdriver\remote\webelement.py:94: in click
+    self._execute(Command.CLICK_ELEMENT)
+.venv\Lib\site-packages\selenium\webdriver\remote\webelement.py:395: in _execute
+    return self._parent.execute(command, params)
+.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:354: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+... (truncated)
+
+tests/test_active_learners.py::test_active_learners_tile  |  failed  |  62.352
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_active_learners_tile(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_active_learners.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:11: in open
+    self.driver.get(base_url.rstrip('/') + "/login")
+.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:363: in get
+    self.execute(Command.GET, {"url": url})
+.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:354: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000203394D97F0>
+... (truncated)
+
+tests/test_add_branch.py::test_add_branch  |  failed  |  73.540
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_add_branch(driver):
+        LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+        page = DashboardPage(driver).go_to_v2_from_current().open_branch_settings()
+>       page.add_branch(
+            first="John",
+            last="Doe",
+            name="Main Training Branch",
+            email="branch.main@example.com",
+            location="Texas HQ, US",
+            country_text="United States",
+            state_value="32",
+            city="Shaktinagar",
+            zip_code="23434",
+        )
+
+tests\test_add_branch.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\branch_settings_page.py:22: in add_branch
+    self.wait_visible(self.MODAL)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibil
+... (truncated)
+
+tests/test_admin_download_invoice.py::test_admin_download_invoice  |  failed  |  40.326
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_admin_download_invoice(driver):
+>       LoginPage(driver).open("https://staging-lms.gitview.net").login(ADMIN_EMAIL, ADMIN_PASS)
+
+tests\test_admin_download_invoice.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+method = <function visibility_of_element_located.<locals>._predi
+... (truncated)
+
+tests/test_bulk_buy.py::test_bulk_buy  |  failed  |  43.767
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_bulk_buy(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_bulk_buy.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+method = <function visibility_of_element_located.<locals>._predicate at 0x000002033955F880>, 
+... (truncated)
+
+tests/test_bulk_invites.py::test_bulk_invites_adding_rows  |  failed  |  40.889
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_bulk_invites_adding_rows(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_bulk_invites.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+method = <function visibility_of_element_located.<locals>._predicate at 0
+... (truncated)
+
+tests/test_category_selection.py::test_verify_category_selection_in_profile  |  failed  |  44.927
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_verify_category_selection_in_profile(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_category_selection.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+method = <function visibility_of_element_located.<local
+... (truncated)
+
+tests/test_course_buy_catalog.py::test_course_buy_from_catalog  |  failed  |  43.106
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_course_buy_from_catalog(driver):
+        email = unique_email()
+        password = "Test1@1234"
+    
+        # 1) Register a brand-new corporate account
+        reg = RegistrationPage(driver)
+        (reg.start_from_home(config.BASE_URL)
+>          .go_to_group_discount()
+           .start_registration(company="AHCA", email=email)
+           .fill_basic_info_and_continue(
+                first="Manish", last="Yadav",
+                mobile="9876543210", password=password
+            )
+           # keep the order that worked for you:
+           .pick_category_and_save(category_value="523", subcategory_value="1850")
+           .accept_terms_and_submit())
+
+tests\test_course_buy_catalog.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\registration_page.py:240:
+... (truncated)
+
+tests/test_course_purchase_dashboard.py::test_course_purchase_from_dashboard  |  failed  |  60.425
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_course_purchase_from_dashboard(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_course_purchase_dashboard.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:11: in open
+    self.driver.get(base_url.rstrip('/') + "/login")
+.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:363: in get
+    self.execute(Command.GET, {"url": url})
+.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:354: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at
+... (truncated)
+
+tests/test_language_selection_spanish.py::test_language_selection_spanish  |  failed  |  44.915
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_language_selection_spanish(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_language_selection_spanish.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+method = <function visibility_of_element_located.<locals>
+... (truncated)
+
+tests/test_login.py::test_login_and_go_v2  |  passed  |  29.630
+tests/test_notifcation.py::test_open_notifications  |  failed  |  39.034
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_open_notifications(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_notifcation.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+method = <function visibility_of_element_located.<locals>._predicate at 0x000002
+... (truncated)
+
+tests/test_pending_invites.py::test_pending_invites_tile  |  failed  |  52.657
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_pending_invites_tile(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_pending_invites.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+method = <function visibility_of_element_located.<locals>._predicate at 0x
+... (truncated)
+
+tests/test_registration.py::test_registration_flow  |  failed  |  40.481
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_registration_flow(driver):
+        email = unique_email()
+    
+        reg = RegistrationPage(driver)
+        (reg.start_from_home(config.BASE_URL)
+>          .go_to_group_discount()
+           .start_registration(company="AHCA", email=email)
+           .fill_basic_info_and_continue(first="John", last="Doe",
+                                         mobile="9876543210", password="Test1@1234")
+           # 1) Choose category/sub-category and Save
+           .pick_category_and_save(category_value="523", subcategory_value="1850")
+           # 2) Accept terms and Submit (final)
+           .accept_terms_and_submit())
+
+tests\test_registration.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\registration_page.py:240: in go_to_group_discount
+    return self.click(s
+... (truncated)
+
+tests/test_user_can_login.py::test_user_can_login  |  failed  |  50.145
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_user_can_login(driver):
+>       LoginPage(driver).open(config.BASE_URL).login(config.LOGIN_EMAIL, config.LOGIN_PASSWORD)
+
+tests\test_user_can_login.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+method = <function visibility_of_element_located.<locals>._predicate at 0x0000020
+... (truncated)
+
+tests/test_verify_add_remove_course_cart.py::test_verify_add_remove_course_cart  |  failed  |  44.051
+  Failure / Info:
+driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="d98e6795-6b5c-4a50-a58b-60d2512bc30e")>
+
+    def test_verify_add_remove_course_cart(driver):
+        """
+        Test Case: Verify Add and Remove Course from Cart
+        Steps:
+          - Login
+          - Click Purchase Seats
+          - Add a course to cart
+          - Remove the course using delete icon
+        """
+    
+        email = "auto_test_01@cpraedcourse.com"
+        password = "123456789"
+    
+        # Step 1: Login
+>       LoginPage(driver).open("https://staging-lms.gitview.net").login(email, password)
+
+tests\test_verify_add_remove_course_cart.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Pages\login_page.py:15: in login
+    self.type(self.EMAIL, email)
+base\base_page.py:189: in type
+    el = self.wait_visible(locator)
+base\base_page.py:172: in wait_visible
+    return self.wait.until(EC.visibilit
+... (truncated)
+
+tests/test_verify_switch_to_student_dashboard.py::test_verify_switch_to_student_dashboard  |  passed  |  20.846
+
+End of report

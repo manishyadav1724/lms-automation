@@ -57,7 +57,7 @@ def test_registration_flow(driver):
 
     # Remove the unconditional v2 jump. Only keep if you *must*:
     driver.get(driver.current_url.replace("/corporate", "/corporate_v2"))
-
+    driver.quit()
 
 
 
